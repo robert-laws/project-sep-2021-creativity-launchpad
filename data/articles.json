@@ -1,0 +1,8 @@
+{
+  "articles": [
+    { "id": 1, "title": "Making a Video on a Short Deadline" },
+    { "id": 2, "title": "Creating a Personal Video Reflection" },
+    { "id": 3, "title": "Making a Basic Podcast" },
+    { "id": 4, "title": "Creating a Poster Presentation" }
+  ]
+}

@@ -14,7 +14,7 @@ To meet the challenges of the website, particular attention must be given to con
 
 #### Technologies Used
 
-The project requires a wide range of technologies to create the website. First, the website data is stored in the JSON file format and loaded dynamically using asynchronous requests. Once loaded, the data will be displayed on the website and make use of modern layout techniques such as CSS Grid and Flexbox. A rich range of semantic HTML will be used in conjunction with WAI-ARIA roles and properties to enhance website accessibility. The website will also make use of ES6 JavaScript features, particularly array methods, to allow users to filter and re-organize website data.
+The project requires a wide range of technologies to create the website. First, the website data is stored in the JSON file format and loaded dynamically using asynchronous requests. Once loaded, the data will be displayed on the website and make use of modern layout techniques such as CSS Grid and Flexbox. A rich range of semantic HTML will be used in conjunction with WAI-ARIA roles and properties to enhance website accessibility. The website will also make use of ES6 JavaScript features, particularly array methods, to allow users to filter and re-organize website data. Finally, the stock photos used in the website are from the free stock photo websites: [Unsplash](https://unsplash.com/), [Pixabay](https://pixabay.com/) and [Pexels](https://pexels.com/).
 
 ## UX Research
 
