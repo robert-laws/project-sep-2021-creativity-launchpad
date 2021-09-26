@@ -1,0 +1,8 @@
+{
+  "projects": [
+    { "id": 1, "title": "Basic Video Recording" },
+    { "id": 2, "title": "Basic Audio Recording" },
+    { "id": 3, "title": "Basic Podcast" },
+    { "id": 4, "title": "Advanced Podcast" }
+  ]
+}

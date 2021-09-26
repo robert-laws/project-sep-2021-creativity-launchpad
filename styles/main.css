@@ -1,0 +1,54 @@
+/* MOBILE */
+/* :root {
+  --xl3-text: 2.2rem;
+  --xl-text: 3rem;
+  --h1-heading: 2rem;
+  --h2-heading: 1.5rem;
+  --h3-heading: 1.3rem;
+  --sub-heading: 1.2rem;
+  --small-text: 1rem;
+  --big-text: 1.25rem;
+
+  --post-line-height: 1.5rem;
+
+  --post-vertical-spacer: 8px 0 2rem;
+  --text-vertical-spacer: 9px 0 1px;
+} */
+
+/* TABLET */
+/* @media (min-width: 700px) {
+  :root {
+    --xl3-text: 3.3rem;
+    --xl-text: 2.6rem;
+    --h1-heading: 1.8rem;
+    --h2-heading: 1.4rem;
+    --h3-heading: 1.2rem;
+    --sub-heading: 1rem;
+    --small-text: 0.9rem;
+    --big-text: 1.15rem;
+
+    --post-line-height: 1.6rem;
+
+    --post-vertical-spacer: 0 0 1rem;
+    --text-vertical-spacer: 6px 0 3px;
+  }
+} */
+
+/* DESKTOP */
+/* @media (min-width: 1280px) {
+  :root {
+    --xl3-text: 3.5rem;
+    --xl-text: 2.4rem;
+    --h1-heading: 1.6rem;
+    --h2-heading: 1.2rem;
+    --h3-heading: 1.1rem;
+    --sub-heading: 0.8rem;
+    --small-text: 0.8rem;
+    --big-text: 1.1rem;
+
+    --post-line-height: 1.7rem;
+
+    --post-vertical-spacer: 0 0 1rem;
+    --text-vertical-spacer: 5px 0 5px;
+  }
+} */
