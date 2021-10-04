@@ -17,7 +17,7 @@
     {
       "id": 2,
       "title": "Logitech USB Microphone",
-      "resource_image": "",
+      "resource_image": "logitech-usb-microphone.jpg",
       "featured_image": "logitech-usb-microphone.jpg",
       "secondary_image": "",
       "short_description": "Plug and play USB Microphone",
@@ -49,7 +49,7 @@
     {
       "id": 4,
       "title": "DJI Pocket 2",
-      "resource_image": "",
+      "resource_image": "dji-pocket-2.jpg",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Handheld 3-Axis Gimbal Stabilizer with 4K Camera",
@@ -72,7 +72,7 @@
     {
       "id": 5,
       "title": "Smatree Portable Osmo Pocket 2 PowerStick",
-      "resource_image": "",
+      "resource_image": "smatree-powerstick.jpg",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Combo powerbank, control, and stand for the DJI Pocket 2",
@@ -94,7 +94,7 @@
     {
       "id": 6,
       "title": "Canon Rebel T7 Camera",
-      "resource_image": "",
+      "resource_image": "canon-rebel-t7-camera.jpg",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "DLSR Camera for video and photography",
@@ -115,7 +115,7 @@
     {
       "id": 7,
       "title": "Canon EF-S 18-135mm Lens",
-      "resource_image": "",
+      "resource_image": "canon-ef-s-18-135mm-lens.jpg",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Multipurpose lens for DSLR cameras",
@@ -133,7 +133,7 @@
     {
       "id": 8,
       "title": "Canon Speedlight 600EX",
-      "resource_image": "",
+      "resource_image": "canon-speedlight-600ex.jpg",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "General purpose camera flash",
@@ -147,7 +147,7 @@
     {
       "id": 9,
       "title": "Canon XA40 Camcorder",
-      "resource_image": "",
+      "resource_image": "canon-xa40-camcorder.jpg",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Professional level 4K video camcorder",
@@ -166,7 +166,7 @@
     {
       "id": 10,
       "title": "GoPro Hero9 Camera",
-      "resource_image": "",
+      "resource_image": "gopro-hero9-camera.jpg",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "High quality action camera",
@@ -174,7 +174,7 @@
       "projects": ["video recording"],
       "category": "video",
       "requires_training": false,
-      "notes": "",
+      "notes": "Battery can be charged while in the camera.",
       "includes": [
         "GoPro HERO9 Black",
         "64GB microSD memory card",
@@ -185,7 +185,7 @@
     {
       "id": 11,
       "title": "Sony Omnidirectional Lavalier Microphone",
-      "resource_image": "",
+      "resource_image": "sony-lavalier-microphone.jpg",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Microphone for interviews and on location audio capture",
@@ -203,7 +203,7 @@
     {
       "id": 12,
       "title": "Sony Digital Voice Recorder",
-      "resource_image": "",
+      "resource_image": "sony-voice-recorder.jpg",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Portable audio recorder",
@@ -217,7 +217,7 @@
     {
       "id": 13,
       "title": "Adobe Photoshop",
-      "resource_image": "",
+      "resource_image": "adobe-photoshop.jpg",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Professional raster graphics editor",
@@ -231,7 +231,7 @@
     {
       "id": 14,
       "title": "Audacity",
-      "resource_image": "",
+      "resource_image": "audacity.jpg",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Audio recorder and editor software",
@@ -245,7 +245,7 @@
     {
       "id": 15,
       "title": "Final Cut Pro",
-      "resource_image": "",
+      "resource_image": "final-cut-pro.jpg",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Professional video creation software",
@@ -259,7 +259,7 @@
     {
       "id": 16,
       "title": "Adobe Illustrator",
-      "resource_image": "",
+      "resource_image": "adobe-illustrator.jpg",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Professional vector graphics editor",
