@@ -3,6 +3,7 @@
     {
       "id": 1,
       "title": "Blue iCE Microphone",
+      "resource_image": "blue-ice-microphone.jpg",
       "featured_image": "blue-ice-microphone-featured.jpg",
       "secondary_image": "blue-ice-microphone-centered.jpg",
       "short_description": "Basic USB Microphone",
@@ -16,6 +17,7 @@
     {
       "id": 2,
       "title": "Logitech USB Microphone",
+      "resource_image": "",
       "featured_image": "logitech-usb-microphone.jpg",
       "secondary_image": "",
       "short_description": "Plug and play USB Microphone",
@@ -33,6 +35,7 @@
     {
       "id": 3,
       "title": "Sony Professional Large Diaphragm Headphone",
+      "resource_image": "sony-professional-headphone.jpg",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Studio monitoring headphone",
@@ -46,6 +49,7 @@
     {
       "id": 4,
       "title": "DJI Pocket 2",
+      "resource_image": "",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Handheld 3-Axis Gimbal Stabilizer with 4K Camera",
@@ -68,6 +72,7 @@
     {
       "id": 5,
       "title": "Smatree Portable Osmo Pocket 2 PowerStick",
+      "resource_image": "",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Combo powerbank, control, and stand for the DJI Pocket 2",
@@ -89,6 +94,7 @@
     {
       "id": 6,
       "title": "Canon Rebel T7 Camera",
+      "resource_image": "",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "DLSR Camera for video and photography",
@@ -109,6 +115,7 @@
     {
       "id": 7,
       "title": "Canon EF-S 18-135mm Lens",
+      "resource_image": "",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Multipurpose lens for DSLR cameras",
@@ -126,6 +133,7 @@
     {
       "id": 8,
       "title": "Canon Speedlight 600EX",
+      "resource_image": "",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "General purpose camera flash",
@@ -139,6 +147,7 @@
     {
       "id": 9,
       "title": "Canon XA40 Camcorder",
+      "resource_image": "",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Professional level 4K video camcorder",
@@ -157,6 +166,7 @@
     {
       "id": 10,
       "title": "GoPro Hero9 Camera",
+      "resource_image": "",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "High quality action camera",
@@ -175,6 +185,7 @@
     {
       "id": 11,
       "title": "Sony Omnidirectional Lavalier Microphone",
+      "resource_image": "",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Microphone for interviews and on location audio capture",
@@ -192,6 +203,7 @@
     {
       "id": 12,
       "title": "Sony Digital Voice Recorder",
+      "resource_image": "",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Portable audio recorder",
@@ -205,6 +217,7 @@
     {
       "id": 13,
       "title": "Adobe Photoshop",
+      "resource_image": "",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Professional raster graphics editor",
@@ -218,6 +231,7 @@
     {
       "id": 14,
       "title": "Audacity",
+      "resource_image": "",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Audio recorder and editor software",
@@ -231,6 +245,7 @@
     {
       "id": 15,
       "title": "Final Cut Pro",
+      "resource_image": "",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Professional video creation software",
@@ -244,6 +259,7 @@
     {
       "id": 16,
       "title": "Adobe Illustrator",
+      "resource_image": "",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Professional vector graphics editor",
