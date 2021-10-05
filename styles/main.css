@@ -303,6 +303,7 @@ section.hero {
 
 main {
   grid-area: main;
+  padding: 2rem 0;
 }
 
 footer {
