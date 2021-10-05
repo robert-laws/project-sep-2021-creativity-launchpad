@@ -269,6 +269,34 @@
       "requires_training": false,
       "notes": "Available in the Library Media Room",
       "includes": ["Adobe Illustrator"]
+    },
+    {
+      "id": 17,
+      "title": "Shure SM58 Vocal Microphone",
+      "resource_image": "shure-sm58-microphone.jpg",
+      "featured_image": "",
+      "secondary_image": "",
+      "short_description": "Microphone for interviews or performances",
+      "long_description": "A cardioid dynamic vocal design well suited for professional vocal use in live performances, sound reinforcement, and studio recording. A built-in spherical filter minimizes wind and breath 'pop' noise, while the cardioid pickup pattern isolates the main sound source while minimizing unwanted background noise.",
+      "projects": ["audio recording"],
+      "category": "audio",
+      "requires_training": false,
+      "notes": "Requires XLR Cable for connection to audio interface",
+      "includes": ["Shure SM58 Vocal Microphone"]
+    },
+    {
+      "id": 18,
+      "title": "Manfrotto 290 Tripod",
+      "resource_image": "manfrotto-290-tripod.jpg",
+      "featured_image": "",
+      "secondary_image": "",
+      "short_description": "Professional vector graphics editor",
+      "long_description": "The tripod extends from 16.5-inches to a maximum height of 67.5-inches. It weighs 5.6 lb and can hold up to 22 lb of gear. The tripod's 3-section legs have flip locks to individually change the height of each leg.",
+      "projects": ["video recording", "photography"],
+      "category": "video",
+      "requires_training": false,
+      "notes": "",
+      "includes": ["Manfrotto 290 Tripod", "Shoulder Carrying Bag"]
     }
   ]
 }
