@@ -94,10 +94,7 @@
     {
       "id": 6,
       "title": "Canon Rebel T7 Camera",
-<<<<<<< HEAD
-=======
       "resource_image": "canon-rebel-t7-camera.jpg",
->>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "DLSR Camera for video and photography",
@@ -118,10 +115,7 @@
     {
       "id": 7,
       "title": "Canon EF-S 18-135mm Lens",
-<<<<<<< HEAD
-=======
       "resource_image": "canon-ef-s-18-135mm-lens.jpg",
->>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Multipurpose lens for DSLR cameras",
@@ -139,10 +133,7 @@
     {
       "id": 8,
       "title": "Canon Speedlight 600EX",
-<<<<<<< HEAD
-=======
       "resource_image": "canon-speedlight-600ex.jpg",
->>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "General purpose camera flash",
@@ -156,10 +147,7 @@
     {
       "id": 9,
       "title": "Canon XA40 Camcorder",
-<<<<<<< HEAD
-=======
       "resource_image": "canon-xa40-camcorder.jpg",
->>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Professional level 4K video camcorder",
@@ -178,10 +166,7 @@
     {
       "id": 10,
       "title": "GoPro Hero9 Camera",
-<<<<<<< HEAD
-=======
       "resource_image": "gopro-hero9-camera.jpg",
->>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "High quality action camera",
@@ -189,11 +174,7 @@
       "projects": ["video recording"],
       "category": "video",
       "requires_training": false,
-<<<<<<< HEAD
-      "notes": "",
-=======
       "notes": "Battery can be charged while in the camera.",
->>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "includes": [
         "GoPro HERO9 Black",
         "64GB microSD memory card",
@@ -204,10 +185,7 @@
     {
       "id": 11,
       "title": "Sony Omnidirectional Lavalier Microphone",
-<<<<<<< HEAD
-=======
       "resource_image": "sony-lavalier-microphone.jpg",
->>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Microphone for interviews and on location audio capture",
@@ -225,10 +203,7 @@
     {
       "id": 12,
       "title": "Sony Digital Voice Recorder",
-<<<<<<< HEAD
-=======
       "resource_image": "sony-voice-recorder.jpg",
->>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Portable audio recorder",
@@ -242,10 +217,7 @@
     {
       "id": 13,
       "title": "Adobe Photoshop",
-<<<<<<< HEAD
-=======
       "resource_image": "adobe-photoshop.jpg",
->>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Professional raster graphics editor",
@@ -259,10 +231,7 @@
     {
       "id": 14,
       "title": "Audacity",
-<<<<<<< HEAD
-=======
       "resource_image": "audacity.jpg",
->>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Audio recorder and editor software",
@@ -276,10 +245,7 @@
     {
       "id": 15,
       "title": "Final Cut Pro",
-<<<<<<< HEAD
-=======
       "resource_image": "final-cut-pro.jpg",
->>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Professional video creation software",
@@ -292,14 +258,6 @@
     },
     {
       "id": 16,
-<<<<<<< HEAD
-      "title": "DJI Pocket 2",
-      "featured_image": "",
-      "secondary_image": "",
-      "short_description": "Video recorder with gimbal",
-      "long_description": "DJI Pocket 2 Gimbal with a 64MP CMOS sensor, up to 8x zoom, a 93° angle of view, and four directional stereo microphones",
-      "projects": [],
-=======
       "title": "Adobe Illustrator",
       "resource_image": "adobe-illustrator.jpg",
       "featured_image": "",
@@ -321,7 +279,6 @@
       "short_description": "Microphone for interviews or performances",
       "long_description": "A cardioid dynamic vocal design well suited for professional vocal use in live performances, sound reinforcement, and studio recording. A built-in spherical filter minimizes wind and breath 'pop' noise, while the cardioid pickup pattern isolates the main sound source while minimizing unwanted background noise.",
       "projects": ["audio recording"],
->>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "category": "audio",
       "requires_training": false,
       "notes": "Requires XLR Cable for connection to audio interface",
