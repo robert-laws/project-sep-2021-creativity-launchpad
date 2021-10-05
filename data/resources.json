@@ -3,6 +3,7 @@
     {
       "id": 1,
       "title": "Blue iCE Microphone",
+      "resource_image": "blue-ice-microphone.jpg",
       "featured_image": "blue-ice-microphone-featured.jpg",
       "secondary_image": "blue-ice-microphone-centered.jpg",
       "short_description": "Basic USB Microphone",
@@ -16,6 +17,7 @@
     {
       "id": 2,
       "title": "Logitech USB Microphone",
+      "resource_image": "logitech-usb-microphone.jpg",
       "featured_image": "logitech-usb-microphone.jpg",
       "secondary_image": "",
       "short_description": "Plug and play USB Microphone",
@@ -33,10 +35,11 @@
     {
       "id": 3,
       "title": "Sony Professional Large Diaphragm Headphone",
+      "resource_image": "sony-professional-headphone.jpg",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Studio monitoring headphone",
-      "long_description": "High quality, unobtrusive, lightweight reference headphone. Engineered to be comfortable to wear for extended periods, making it ideal for use in broadcast and studio environments. Has a 9.8 foot cord terminating with a gold 3.5mm plug",
+      "long_description": "High quality, unobtrusive, lightweight reference headphone. Engineered to be comfortable to wear for extended periods, making it ideal for use in broadcast and studio environments. Has a 9.8 foot cord terminating with a gold 3.5mm plug.",
       "projects": ["podcast editing", "video editing"],
       "category": "audio",
       "requires_training": false,
@@ -46,10 +49,11 @@
     {
       "id": 4,
       "title": "DJI Pocket 2",
+      "resource_image": "dji-pocket-2.jpg",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Handheld 3-Axis Gimbal Stabilizer with 4K Camera",
-      "long_description": "Pocket-sized and extremely portable, DJI Pocket 2 is a tiny camera that records up to 4K and features a 3-Axis gimbal stabilizer. The gimbal keeps the camera steady, even for long-exposure shots and in low-light environments.",
+      "long_description": "Pocket-sized and extremely portable, DJI Pocket 2 is a tiny camera that records up to 4K and features a 3-Axis gimbal stabilizer. The gimbal keeps the camera steady, even for long-exposure shots and in low-light environments. Video can be captured up to cinematic 4K 60p video at 100 Mb/s and 64MP still photos onto a microSD card up to 256GB in capacity",
       "projects": ["video recording"],
       "category": "video",
       "requires_training": false,
@@ -68,6 +72,7 @@
     {
       "id": 5,
       "title": "Smatree Portable Osmo Pocket 2 PowerStick",
+      "resource_image": "smatree-powerstick.jpg",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Combo powerbank, control, and stand for the DJI Pocket 2",
@@ -89,6 +94,10 @@
     {
       "id": 6,
       "title": "Canon Rebel T7 Camera",
+<<<<<<< HEAD
+=======
+      "resource_image": "canon-rebel-t7-camera.jpg",
+>>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "DLSR Camera for video and photography",
@@ -109,6 +118,10 @@
     {
       "id": 7,
       "title": "Canon EF-S 18-135mm Lens",
+<<<<<<< HEAD
+=======
+      "resource_image": "canon-ef-s-18-135mm-lens.jpg",
+>>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Multipurpose lens for DSLR cameras",
@@ -126,6 +139,10 @@
     {
       "id": 8,
       "title": "Canon Speedlight 600EX",
+<<<<<<< HEAD
+=======
+      "resource_image": "canon-speedlight-600ex.jpg",
+>>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "General purpose camera flash",
@@ -139,6 +156,10 @@
     {
       "id": 9,
       "title": "Canon XA40 Camcorder",
+<<<<<<< HEAD
+=======
+      "resource_image": "canon-xa40-camcorder.jpg",
+>>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Professional level 4K video camcorder",
@@ -157,6 +178,10 @@
     {
       "id": 10,
       "title": "GoPro Hero9 Camera",
+<<<<<<< HEAD
+=======
+      "resource_image": "gopro-hero9-camera.jpg",
+>>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "High quality action camera",
@@ -164,7 +189,11 @@
       "projects": ["video recording"],
       "category": "video",
       "requires_training": false,
+<<<<<<< HEAD
       "notes": "",
+=======
+      "notes": "Battery can be charged while in the camera.",
+>>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "includes": [
         "GoPro HERO9 Black",
         "64GB microSD memory card",
@@ -175,6 +204,10 @@
     {
       "id": 11,
       "title": "Sony Omnidirectional Lavalier Microphone",
+<<<<<<< HEAD
+=======
+      "resource_image": "sony-lavalier-microphone.jpg",
+>>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Microphone for interviews and on location audio capture",
@@ -192,6 +225,10 @@
     {
       "id": 12,
       "title": "Sony Digital Voice Recorder",
+<<<<<<< HEAD
+=======
+      "resource_image": "sony-voice-recorder.jpg",
+>>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Portable audio recorder",
@@ -205,6 +242,10 @@
     {
       "id": 13,
       "title": "Adobe Photoshop",
+<<<<<<< HEAD
+=======
+      "resource_image": "adobe-photoshop.jpg",
+>>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Professional raster graphics editor",
@@ -218,6 +259,10 @@
     {
       "id": 14,
       "title": "Audacity",
+<<<<<<< HEAD
+=======
+      "resource_image": "audacity.jpg",
+>>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Audio recorder and editor software",
@@ -231,6 +276,10 @@
     {
       "id": 15,
       "title": "Final Cut Pro",
+<<<<<<< HEAD
+=======
+      "resource_image": "final-cut-pro.jpg",
+>>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Professional video creation software",
@@ -243,16 +292,54 @@
     },
     {
       "id": 16,
+<<<<<<< HEAD
       "title": "DJI Pocket 2",
       "featured_image": "",
       "secondary_image": "",
       "short_description": "Video recorder with gimbal",
       "long_description": "DJI Pocket 2 Gimbal with a 64MP CMOS sensor, up to 8x zoom, a 93° angle of view, and four directional stereo microphones",
       "projects": [],
+=======
+      "title": "Adobe Illustrator",
+      "resource_image": "adobe-illustrator.jpg",
+      "featured_image": "",
+      "secondary_image": "",
+      "short_description": "Professional vector graphics editor",
+      "long_description": "Supports creations of vector graphics for web images, brand logos, icons, book illustrations, product packaging, and billboards. Includes powerful editing tools and features such as support for multiple art boards and exporting to several different output formats.",
+      "projects": ["poster creation"],
+      "category": "software",
+      "requires_training": false,
+      "notes": "Available in the Library Media Room",
+      "includes": ["Adobe Illustrator"]
+    },
+    {
+      "id": 17,
+      "title": "Shure SM58 Vocal Microphone",
+      "resource_image": "shure-sm58-microphone.jpg",
+      "featured_image": "",
+      "secondary_image": "",
+      "short_description": "Microphone for interviews or performances",
+      "long_description": "A cardioid dynamic vocal design well suited for professional vocal use in live performances, sound reinforcement, and studio recording. A built-in spherical filter minimizes wind and breath 'pop' noise, while the cardioid pickup pattern isolates the main sound source while minimizing unwanted background noise.",
+      "projects": ["audio recording"],
+>>>>>>> 605f44b3e04627a1bf57f55f700b1dfafef3b540
       "category": "audio",
       "requires_training": false,
+      "notes": "Requires XLR Cable for connection to audio interface",
+      "includes": ["Shure SM58 Vocal Microphone"]
+    },
+    {
+      "id": 18,
+      "title": "Manfrotto 290 Tripod",
+      "resource_image": "manfrotto-290-tripod.jpg",
+      "featured_image": "",
+      "secondary_image": "",
+      "short_description": "Professional vector graphics editor",
+      "long_description": "The tripod extends from 16.5-inches to a maximum height of 67.5-inches. It weighs 5.6 lb and can hold up to 22 lb of gear. The tripod's 3-section legs have flip locks to individually change the height of each leg.",
+      "projects": ["video recording", "photography"],
+      "category": "video",
+      "requires_training": false,
       "notes": "",
-      "includes": []
+      "includes": ["Manfrotto 290 Tripod", "Shoulder Carrying Bag"]
     }
   ]
 }
