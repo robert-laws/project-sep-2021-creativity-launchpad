@@ -1,17 +1,51 @@
 // Main JavaScript File
+let resourcesList = [];
 const resourceCards = document.querySelector('#cards-section');
+const clearCardsButton = document.querySelector('#clear-cards');
+const aToZButton = document.querySelector('#a-to-z-cards');
+const filterButton = document.querySelector('#filter-button');
 
 const getResourceData = async () => {
   const response = await fetch('./data/resources.json');
   const data = await response.json();
-  buildResourceCards(data, addCards);
+  resourcesList = data.resources;
+  initResourceCards(addCards);
 };
 
-const buildResourceCards = (data, addCardsToPage) => {
-  data.resources.map((resource) => {
+const initResourceCards = (addCardsToPage) => {
+  resourcesList.forEach((resource) => {
     const newCard = buildResourceCard(resource);
     addCardsToPage(newCard);
   });
+};
+
+const buildResourceCards = (data, addCardsToPage) => {
+  data.forEach((resource) => {
+    const newCard = buildResourceCard(resource);
+    addCardsToPage(newCard);
+  });
+};
+
+const sortCardsAtoZ = () => {
+  const sortedResourceList = resourcesList.sort((a, b) => {
+    if (a.title > b.title) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+
+  clearCards();
+  buildResourceCards(sortedResourceList, addCards);
+};
+
+const filterCards = (filterOption) => {
+  const filteredResourceList = resourcesList.filter((resource) => {
+    return resource.category === filterOption;
+  });
+
+  clearCards();
+  buildResourceCards(filteredResourceList, addCards);
 };
 
 const buildResourceCard = (resource) => {
@@ -55,5 +89,17 @@ const buildResourceCard = (resource) => {
 const addCards = (newCard) => {
   resourceCards.appendChild(newCard);
 };
+
+const clearCards = () => {
+  resourceCards.innerHTML = '';
+};
+
+clearCardsButton.addEventListener('click', clearCards);
+
+aToZButton.addEventListener('click', sortCardsAtoZ);
+
+filterButton.addEventListener('click', () => {
+  filterCards('audio');
+});
 
 getResourceData();
