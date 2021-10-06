@@ -1,8 +1,13 @@
 const resourcesList = [];
 let filteredResourcesList = [];
+const siteContainer = document.querySelector('.site-container');
 const resourcesContainer = document.querySelector('#cards-section');
 
+const filterButton = document.querySelector('#filter-button');
 const aToZButton = document.querySelector('#a-to-z-cards');
+const clearCardsButton = document.querySelector('#clear-cards');
+
+const sidePanel = document.querySelector('#side-tools');
 
 const getResourceData = async () => {
   const response = await fetch('./data/resources.json');
@@ -85,6 +90,38 @@ const clearCards = () => {
   resourcesContainer.innerHTML = '';
 };
 
+const toggleSidePanel = () => {
+  if (sidePanel.classList.contains('side-panel-open')) {
+    sidePanel.classList.remove('side-panel-open');
+  } else {
+    sidePanel.classList.add('side-panel-open');
+  }
+};
+
+const handleToggle = (e) => {
+  const toggleMenu = () => sidePanel.classList.toggle('side-panel-open');
+  if (!sidePanel.classList.contains('side-panel-open')) {
+    toggleMenu();
+    addOffClick(e, toggleMenu);
+  }
+};
+
+const addOffClick = (e, callback) => {
+  const offClick = (event) => {
+    if (e !== event) {
+      callback();
+      document.removeEventListener('click', offClick);
+    }
+  };
+  document.addEventListener('click', offClick);
+};
+
+filterButton.addEventListener('click', handleToggle);
+
 aToZButton.addEventListener('click', sortCardsAtoZ);
+
+clearCardsButton.addEventListener('click', clearCards);
+
+// siteContainer.addEventListener('click', handleToggle);
 
 getResourceData();
