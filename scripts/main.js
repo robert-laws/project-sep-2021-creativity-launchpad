@@ -1,5 +1,6 @@
 // Main JavaScript File
 let resourcesList = [];
+
 const resourceCards = document.querySelector('#cards-section');
 const clearCardsButton = document.querySelector('#clear-cards');
 const aToZButton = document.querySelector('#a-to-z-cards');
@@ -8,8 +9,9 @@ const filterButton = document.querySelector('#filter-button');
 const getResourceData = async () => {
   const response = await fetch('./data/resources.json');
   const data = await response.json();
-  resourcesList = data.resources;
-  initResourceCards(addCards);
+  const cardsList = buildCards(data.resources);
+  const htmlCards = cardsList.join('');
+  resourceCards.innerHTML = htmlCards;
 };
 
 // const getData = async () => {
@@ -24,6 +26,37 @@ const getResourceData = async () => {
 //   }
 // };
 
+const cardTemplate = ({ resource_image, title, short_description }) => {
+  return `
+    <div class="card">
+      <a href="resource.html">
+        <figure>
+          <img src="images/${resource_image}" alt="" />
+          <figcaption>
+            <h5 class="bold">${title}</h5>
+            <p>${short_description}</p>
+          </figcaption>
+        </figure>
+      </a>
+    </div>
+  `;
+};
+
+const buildCards = (resourcesData) => {
+  const cards = resourcesData.map(
+    ({ resource_image, title, short_description }) => {
+      return cardTemplate({ resource_image, title, short_description });
+    }
+  );
+
+  return cards;
+};
+
+const initResourceData = (data) => {
+  resourcesList = data;
+  buildResourceCards(addCards);
+};
+
 const initResourceCards = (addCardsToPage) => {
   resourcesList.forEach((resource) => {
     const newCard = buildResourceCard(resource);
@@ -31,7 +64,7 @@ const initResourceCards = (addCardsToPage) => {
   });
 };
 
-const buildResourceCards = (data, addCardsToPage) => {
+const buildResourceCards = (addCardsToPage) => {
   data.forEach((resource) => {
     const newCard = buildResourceCard(resource);
     addCardsToPage(newCard);
