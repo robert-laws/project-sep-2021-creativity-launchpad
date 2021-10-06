@@ -9,6 +9,11 @@ const clearCardsButton = document.querySelector('#clear-cards');
 
 const sidePanel = document.querySelector('#side-tools');
 
+const audioFilter = document.querySelector('#audio-option');
+const videoFilter = document.querySelector('#video-option');
+const softwareFilter = document.querySelector('#software-option');
+const equipmentFilter = document.querySelector('#equipment-option');
+
 const getResourceData = async () => {
   const response = await fetch('./data/resources.json');
   const data = await response.json();
@@ -110,10 +115,10 @@ const addOffClick = (e, callback) => {
   const offClick = (event) => {
     if (e !== event) {
       callback();
-      document.removeEventListener('click', offClick);
+      siteContainer.removeEventListener('click', offClick);
     }
   };
-  document.addEventListener('click', offClick);
+  siteContainer.addEventListener('click', offClick);
 };
 
 filterButton.addEventListener('click', handleToggle);
@@ -122,6 +127,63 @@ aToZButton.addEventListener('click', sortCardsAtoZ);
 
 clearCardsButton.addEventListener('click', clearCards);
 
-// siteContainer.addEventListener('click', handleToggle);
+const checkFilters = () => {
+  const checkboxes = document.querySelectorAll(
+    '.panel-options input[type="checkbox"]'
+  );
+
+  const filterConditions = [];
+
+  checkboxes.forEach((checkbox) => {
+    if (checkbox.checked) {
+      filterConditions.push(checkbox.id.split('-')[0]);
+    }
+  });
+
+  console.log(filterConditions);
+
+  applyFilters(filterConditions);
+};
+
+const applyFilters = (filterConditions) => {
+  let appliedFilters = [];
+  if (filterConditions.length === 0) {
+    appliedFilters = resourcesList;
+  } else {
+    appliedFilters = resourcesList.filter((resource) => {
+      return filterConditions.includes(resource.category);
+    });
+  }
+
+  clearCards();
+  const cards = buildCards(appliedFilters);
+  resourcesContainer.innerHTML = cards.join('');
+};
+
+audioFilter.addEventListener('click', (e) => {
+  checkFilters();
+  // const checked = e.target.checked;
+  // if (checked) {
+  //   filteredResourcesList = resourcesList.filter(
+  //     (resource) => resource.category === 'audio'
+  //   );
+
+  //   clearCards();
+  //   const cards = buildCards(filteredResourcesList);
+  //   resourcesContainer.innerHTML = cards.join('');
+  // }
+});
+
+videoFilter.addEventListener('click', (e) => {
+  checkFilters();
+});
+
+softwareFilter.addEventListener('click', (e) => {
+  checkFilters();
+});
+
+equipmentFilter.addEventListener('click', (e) => {
+  checkFilters();
+});
 
 getResourceData();

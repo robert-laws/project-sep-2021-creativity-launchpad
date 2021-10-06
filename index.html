@@ -89,33 +89,29 @@
     <link rel="stylesheet" href="styles/main.css" />
 
     <script src="scripts/resources.js" defer></script>
-    <style>
-      .side-panel {
-        height: 100vh;
-        width: 300px;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: -320px;
-        background-color: #111;
-        overflow-x: hidden;
-        padding-top: 8rem;
-        transition: left 0.5s ease-in-out;
-      }
-
-      .side-panel-open {
-        left: 0 !important;
-      }
-
-      .side-panel a {
-        color: var(--white);
-      }
-    </style>
   </head>
   <body>
     <a id="skip-link" href="#main-content">Skip to content.</a>
     <div id="side-tools" class="side-panel">
-      <a href="#">Select a Filter</a>
+      <div class="panel-title">Select filter options</div>
+      <div class="panel-options">
+        <div class="option-item">
+          <input type="checkbox" id="audio-option" />
+          <label for="audio-option">Audio</label>
+        </div>
+        <div class="option-item">
+          <input type="checkbox" id="video-option" />
+          <label for="video-option">Video</label>
+        </div>
+        <div class="option-item">
+          <input type="checkbox" id="software-option" />
+          <label for="software-option">Software</label>
+        </div>
+        <div class="option-item">
+          <input type="checkbox" id="equipment-option" />
+          <label for="equipment-option">Equipment</label>
+        </div>
+      </div>
     </div>
     <div class="site-container">
       <header>
