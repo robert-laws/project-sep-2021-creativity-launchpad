@@ -120,7 +120,7 @@
       "secondary_image": "",
       "short_description": "Multipurpose lens for DSLR cameras",
       "long_description": "A good all-around lens ideal for creative photography and video. The EF-S 18-135mm f/3.5-5.6 IS USM has a versatile zoom range that is good for up-close and distant subjects and action.",
-      "projects": [],
+      "projects": ["photography"],
       "category": "video",
       "requires_training": false,
       "notes": "Photo Filter Thread Size is 67 millimeters",

@@ -1,7 +1,9 @@
 const resourcesList = [];
 let filteredResourcesList = [];
+
 const siteContainer = document.querySelector('.site-container');
 const resourcesContainer = document.querySelector('#cards-section');
+const resourcesTotal = document.querySelector('#cards-total');
 
 const filterButton = document.querySelector('#filter-button');
 const aToZButton = document.querySelector('#a-to-z-cards');
@@ -74,19 +76,37 @@ const buildCards = (resourcesData) => {
     }
   );
 
+  updateTotalCards(cards.length);
+
   return cards;
 };
 
+const updateTotalCards = (total) => {
+  resourcesTotal.innerHTML = `${total} Total Resources`;
+};
+
 const sortCardsAtoZ = () => {
-  const filteredResourcesList = resourcesList.sort((a, b) => {
-    if (a.title > b.title) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+  let sortedResourcesList = [];
+  if (filteredResourcesList.length > 0) {
+    sortedResourcesList = filteredResourcesList.sort((a, b) => {
+      if (a.title > b.title) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+  } else {
+    sortedResourcesList = resourcesList.sort((a, b) => {
+      if (a.title > b.title) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+  }
 
   clearCards();
+  filteredResourcesList = sortedResourcesList;
   const cards = buildCards(filteredResourcesList);
   resourcesContainer.innerHTML = cards.join('');
 };
@@ -127,63 +147,125 @@ aToZButton.addEventListener('click', sortCardsAtoZ);
 
 clearCardsButton.addEventListener('click', clearCards);
 
-const checkFilters = () => {
+let filterCategoryConditions = [];
+let filterProjectTypeConditions = [];
+
+const checkCategoryFilters = () => {
   const checkboxes = document.querySelectorAll(
-    '.panel-options input[type="checkbox"]'
+    '.category-filter-options input[type="checkbox"]'
   );
 
-  const filterConditions = [];
+  filterCategoryConditions = [];
 
   checkboxes.forEach((checkbox) => {
     if (checkbox.checked) {
-      filterConditions.push(checkbox.id.split('-')[0]);
+      filterCategoryConditions.push(checkbox.id.split('-')[0]);
     }
   });
 
-  console.log(filterConditions);
+  console.log(filterCategoryConditions);
 
-  applyFilters(filterConditions);
+  applyFilters();
 };
 
-const applyFilters = (filterConditions) => {
+const checkProductTypeFilters = () => {
+  const checkboxes = document.querySelectorAll(
+    '.project-type-filter-options input[type="checkbox"]'
+  );
+
+  filterProjectTypeConditions = [];
+
+  checkboxes.forEach((checkbox) => {
+    if (checkbox.checked) {
+      let projectType = checkbox.id.split('-');
+      projectType = projectType.slice(0, projectType.length - 1).join(' ');
+      filterProjectTypeConditions.push(projectType);
+    }
+  });
+
+  console.log(filterProjectTypeConditions);
+
+  applyFilters();
+};
+
+const applyFilters = () => {
   let appliedFilters = [];
-  if (filterConditions.length === 0) {
+  let categoryFilters = [];
+  let projectTypeFilters = [];
+
+  if (
+    filterCategoryConditions.length === 0 &&
+    filterProjectTypeConditions.length === 0
+  ) {
     appliedFilters = resourcesList;
   } else {
-    appliedFilters = resourcesList.filter((resource) => {
-      return filterConditions.includes(resource.category);
+    categoryFilters = resourcesList.filter((resource) => {
+      return filterCategoryConditions.includes(resource.category);
     });
+
+    projectTypeFilters = resourcesList.filter((resource) => {
+      return resource.projects.some((project) => {
+        return filterProjectTypeConditions.includes(project);
+      });
+    });
+
+    let categoryResourceIds = new Set(
+      categoryFilters.map((resource) => resource.id)
+    );
+    appliedFilters = [
+      ...categoryFilters,
+      ...projectTypeFilters.filter((resource) => {
+        return !categoryResourceIds.has(resource.id);
+      }),
+    ];
   }
 
   clearCards();
-  const cards = buildCards(appliedFilters);
+  filteredResourcesList = appliedFilters;
+  const cards = buildCards(filteredResourcesList);
   resourcesContainer.innerHTML = cards.join('');
 };
 
-audioFilter.addEventListener('click', (e) => {
-  checkFilters();
-  // const checked = e.target.checked;
-  // if (checked) {
-  //   filteredResourcesList = resourcesList.filter(
-  //     (resource) => resource.category === 'audio'
-  //   );
+// audioFilter.addEventListener('click', (e) => {
+//   checkCategoryFilters();
+//   // const checked = e.target.checked;
+//   // if (checked) {
+//   //   filteredResourcesList = resourcesList.filter(
+//   //     (resource) => resource.category === 'audio'
+//   //   );
 
-  //   clearCards();
-  //   const cards = buildCards(filteredResourcesList);
-  //   resourcesContainer.innerHTML = cards.join('');
-  // }
-});
+//   //   clearCards();
+//   //   const cards = buildCards(filteredResourcesList);
+//   //   resourcesContainer.innerHTML = cards.join('');
+//   // }
+// });
 
-videoFilter.addEventListener('click', (e) => {
-  checkFilters();
-});
+// videoFilter.addEventListener('click', (e) => {
+//   checkCategoryFilters();
+// });
 
-softwareFilter.addEventListener('click', (e) => {
-  checkFilters();
-});
+// softwareFilter.addEventListener('click', (e) => {
+//   checkCategoryFilters();
+// });
 
-equipmentFilter.addEventListener('click', (e) => {
-  checkFilters();
-});
+(function () {
+  const checkboxes = document.querySelectorAll(
+    '.category-filter-options input[type="checkbox"]'
+  );
+
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('click', checkCategoryFilters);
+  });
+})();
+
+(function () {
+  const checkboxes = document.querySelectorAll(
+    '.project-type-filter-options input[type="checkbox"]'
+  );
+
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('click', checkProductTypeFilters);
+  });
+})();
 
 getResourceData();

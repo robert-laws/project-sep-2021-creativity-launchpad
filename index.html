@@ -94,7 +94,8 @@
     <a id="skip-link" href="#main-content">Skip to content.</a>
     <div id="side-tools" class="side-panel">
       <div class="panel-title">Select filter options</div>
-      <div class="panel-options">
+      <div class="panel-options category-filter-options">
+        <div class="panel-options-title">Resource Category</div>
         <div class="option-item">
           <input type="checkbox" id="audio-option" />
           <label for="audio-option">Audio</label>
@@ -107,9 +108,51 @@
           <input type="checkbox" id="software-option" />
           <label for="software-option">Software</label>
         </div>
+      </div>
+      <hr />
+      <div class="panel-options project-type-filter-options">
+        <div class="panel-options-title">Project Type</div>
         <div class="option-item">
-          <input type="checkbox" id="equipment-option" />
-          <label for="equipment-option">Equipment</label>
+          <input type="checkbox" id="video-recording-option" />
+          <label for="video-recording-option">Video Recording</label>
+        </div>
+        <div class="option-item">
+          <input type="checkbox" id="video-editing-option" />
+          <label for="video-editing-option">Video Editing</label>
+        </div>
+        <div class="option-item">
+          <input type="checkbox" id="audio-recording-option" />
+          <label for="audio-recording-option">Audio Recording</label>
+        </div>
+        <div class="option-item">
+          <input type="checkbox" id="photography-option" />
+          <label for="photography-option">Photography</label>
+        </div>
+        <div class="option-item">
+          <input type="checkbox" id="photo-editing-option" />
+          <label for="photo-editing-option">Photo Editing</label>
+        </div>
+        <div class="option-item">
+          <input type="checkbox" id="podcast-recording-option" />
+          <label for="podcast-recording-option">Podcast Recording</label>
+        </div>
+        <div class="option-item">
+          <input type="checkbox" id="podcast-editing-option" />
+          <label for="podcast-editing-option">Podcast Editing</label>
+        </div>
+        <div class="option-item">
+          <input type="checkbox" id="poster-creation-option" />
+          <label for="poster-creation-option">Poster Creation</label>
+        </div>
+        <div class="option-item">
+          <input type="checkbox" id="recorded-presentation-option" />
+          <label for="recorded-presentation-option"
+            >Recorded Presentation</label
+          >
+        </div>
+        <div class="option-item">
+          <input type="checkbox" id="zoom-teleconference-option" />
+          <label for="zoom-teleconference-option">Zoom Teleconference</label>
         </div>
       </div>
     </div>
@@ -149,7 +192,9 @@
             >
           </div>
         </section>
-        <section id="cards-section" class="cards">
+        <section class="cards-section">
+          <header id="cards-total" class="cards-total"></header>
+          <div id="cards-section" class="cards"></div>
           <!-- <div class="card">
             <a href="resource.html">
               <figure>
