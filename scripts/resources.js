@@ -2,19 +2,14 @@ const resourcesList = [];
 let filteredResourcesList = [];
 
 const siteContainer = document.querySelector('.site-container');
-const resourcesContainer = document.querySelector('#cards-section');
+const resourcesContainer = document.querySelector('#cards-container');
 const resourcesTotal = document.querySelector('#cards-total');
 
 const filterButton = document.querySelector('#filter-button');
-const aToZButton = document.querySelector('#a-to-z-cards');
+const aToZButton = document.querySelector('#a-to-z-button');
 const clearCardsButton = document.querySelector('#clear-cards');
 
-const sidePanel = document.querySelector('#side-tools');
-
-const audioFilter = document.querySelector('#audio-option');
-const videoFilter = document.querySelector('#video-option');
-const softwareFilter = document.querySelector('#software-option');
-const equipmentFilter = document.querySelector('#equipment-option');
+const sidePanel = document.querySelector('#side-panel');
 
 const getResourceData = async () => {
   const response = await fetch('./data/resources.json');
@@ -115,13 +110,13 @@ const clearCards = () => {
   resourcesContainer.innerHTML = '';
 };
 
-const toggleSidePanel = () => {
-  if (sidePanel.classList.contains('side-panel-open')) {
-    sidePanel.classList.remove('side-panel-open');
-  } else {
-    sidePanel.classList.add('side-panel-open');
-  }
-};
+// const toggleSidePanel = () => {
+//   if (sidePanel.classList.contains('side-panel-open')) {
+//     sidePanel.classList.remove('side-panel-open');
+//   } else {
+//     sidePanel.classList.add('side-panel-open');
+//   }
+// };
 
 const handleToggle = (e) => {
   const toggleMenu = () => sidePanel.classList.toggle('side-panel-open');

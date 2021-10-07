@@ -88,11 +88,11 @@
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/main.css" />
 
-    <script src="scripts/resources.js" defer></script>
+    <script src="scripts/main.js" defer></script>
   </head>
   <body>
     <a id="skip-link" href="#main-content">Skip to content.</a>
-    <div id="side-tools" class="side-panel">
+    <div id="side-panel" class="side-panel">
       <div class="panel-title">Select filter options</div>
       <div class="panel-options category-filter-options">
         <div class="panel-options-title">Resource Category</div>
@@ -156,7 +156,7 @@
         </div>
       </div>
     </div>
-    <div class="site-container">
+    <div id="site-container" class="site-container">
       <header>
         <a class="logo" href="index.html">
           <img
@@ -185,7 +185,7 @@
             >
           </div>
           <div class="button-group">
-            <a id="a-to-z-cards" href="#" class="button outlined">A - Z</a>
+            <a id="a-to-z-button" href="#" class="button outlined">A - Z</a>
             <a href="#" class="button outlined margin-left">Recent</a>
             <a id="clear-cards" href="#" class="button outlined margin-left"
               >Clear</a
@@ -194,139 +194,7 @@
         </section>
         <section class="cards-section">
           <div id="cards-total" class="cards-total"></div>
-          <div id="cards-section" class="cards"></div>
-          <!-- <div class="card">
-            <a href="resource.html">
-              <figure>
-                <img src="images/blue-ice-microphone.jpg" alt="" />
-                <figcaption>
-                  <h5 class="bold">Blue iCE Microphone</h5>
-                  <p>Basic USB Microphone</p>
-                </figcaption>
-              </figure>
-            </a>
-          </div>
-          <div class="card">
-            <a class="card" href="/">
-              <figure>
-                <img src="images/adobe-photoshop.jpg" alt="" />
-                <figcaption>
-                  <h5 class="bold">Adobe Photoshop</h5>
-                  <p>Image Editing Software</p>
-                </figcaption>
-              </figure>
-            </a>
-          </div>
-          <div class="card">
-            <a class="card" href="/">
-              <figure>
-                <img src="images/audacity.jpg" alt="" />
-                <figcaption>
-                  <h5 class="bold">Audacity</h5>
-                  <p>Audio Editing Software</p>
-                </figcaption>
-              </figure>
-            </a>
-          </div>
-          <div class="card">
-            <a class="card" href="/"
-              ><figure>
-                <img src="images/canon-EF-S-18-135mm-lens.jpg" alt="" />
-                <figcaption>
-                  <h5 class="bold">Canon EF-S 18-135mm Lens</h5>
-                  <p>Multipurpose Lens</p>
-                </figcaption>
-              </figure></a
-            >
-          </div>
-          <div class="card">
-            <a class="card" href="/"
-              ><figure>
-                <img src="images/canon-rebel-T7-camera.jpg" alt="" />
-                <figcaption>
-                  <h5 class="bold">Canon Rebel T7 Camera</h5>
-                  <p>Photography Camera</p>
-                </figcaption>
-              </figure></a
-            >
-          </div>
-          <div class="card">
-            <a class="card" href="/"
-              ><figure>
-                <img src="images/canon-speedlight-600EX.jpg" alt="" />
-                <figcaption>
-                  <h5 class="bold">Canon Speedlight 600EX</h5>
-                  <p>Camera Flash</p>
-                </figcaption>
-              </figure></a
-            >
-          </div>
-          <div class="card">
-            <a class="card" href="/"
-              ><figure>
-                <img src="images/final-cut-pro.jpg" alt="" />
-                <figcaption>
-                  <h5 class="bold">Final Cut Pro</h5>
-                  <p>Advanced Video Editing Software</p>
-                </figcaption>
-              </figure></a
-            >
-          </div>
-          <div class="card">
-            <a class="card" href="/"
-              ><figure>
-                <img src="images/canon-xa40-camcorder.jpg" alt="" />
-                <figcaption>
-                  <h5 class="bold">Canon XA40 Camcorder</h5>
-                  <p>Advanced Video Camcorder</p>
-                </figcaption>
-              </figure></a
-            >
-          </div>
-          <div class="card">
-            <a class="card" href="/"
-              ><figure>
-                <img src="images/gopro-hero9-camera.jpg" alt="" />
-                <figcaption>
-                  <h5 class="bold">GoPro Hero9 Camera</h5>
-                  <p>Action Video Camera</p>
-                </figcaption>
-              </figure></a
-            >
-          </div>
-          <div class="card">
-            <a class="card" href="/"
-              ><figure>
-                <img src="images/logitech-usb-microphone.jpg" alt="" />
-                <figcaption>
-                  <h5 class="bold">Logitech USB Microphone</h5>
-                  <p>Basic USB Microphone</p>
-                </figcaption>
-              </figure></a
-            >
-          </div>
-          <div class="card">
-            <a class="card" href="/"
-              ><figure>
-                <img src="images/sony-lavalier-microphone.jpg" alt="" />
-                <figcaption>
-                  <h5 class="bold">Sony Lavalier Microphone</h5>
-                  <p>Multipurpose Microphone</p>
-                </figcaption>
-              </figure></a
-            >
-          </div>
-          <div class="card">
-            <a class="card" href="/"
-              ><figure>
-                <img src="images/sony-voice-recorder.jpg" alt="" />
-                <figcaption>
-                  <h5 class="bold">Sony Voice Recorder</h5>
-                  <p>Portable Audio Recorder</p>
-                </figcaption>
-              </figure></a
-            >
-          </div> -->
+          <div id="cards-container" class="cards"></div>
         </section>
       </main>
       <div class="footer-divider" role="presentation"></div>
