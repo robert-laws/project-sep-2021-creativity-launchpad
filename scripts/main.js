@@ -9,6 +9,7 @@ const cardsContainer = document.querySelector('#cards-container'); // container 
 const cardsTotal = document.querySelector('#cards-total'); // total number of cards
 
 const filterButton = document.querySelector('#filter-button'); // button to filter resources
+const resetFiltersButton = document.querySelector('#reset-filters-button');
 const aToZButton = document.querySelector('#a-to-z-button'); // button to sort resources in alphabetical order
 
 const sidePanel = document.querySelector('#side-panel'); // side panel for filter options
@@ -140,8 +141,28 @@ const addOffClick = (e, callback) => {
 // add event listeners to filter button
 filterButton.addEventListener('click', handleToggle);
 
+// add event listeners to reset filter options
+resetFiltersButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  const filterCheckboxes = document.querySelectorAll(
+    '.side-panel .option-item input[type="checkbox"]'
+  );
+  filterCheckboxes.forEach((checkbox) => {
+    checkbox.checked = false;
+    triggerEvent(checkbox, 'change');
+  });
+});
+
+const triggerEvent = (element, eventName) => {
+  const event = new Event(eventName);
+  element.dispatchEvent(event);
+};
+
 // add event listeners to aToZ button
-aToZButton.addEventListener('click', sortCardsAtoZ);
+aToZButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  sortCardsAtoZ();
+});
 
 // filter process [TO BE REFACTORED]
 let filterCategoryConditions = [];
@@ -231,7 +252,7 @@ const applyFilters = () => {
   );
 
   checkboxes.forEach((checkbox) => {
-    checkbox.addEventListener('click', checkCategoryFilters);
+    checkbox.addEventListener('change', checkCategoryFilters);
   });
 })();
 
@@ -242,7 +263,7 @@ const applyFilters = () => {
   );
 
   checkboxes.forEach((checkbox) => {
-    checkbox.addEventListener('click', checkProductTypeFilters);
+    checkbox.addEventListener('change', checkProductTypeFilters);
   });
 })();
 
