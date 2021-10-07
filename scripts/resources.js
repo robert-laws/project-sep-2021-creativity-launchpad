@@ -209,15 +209,26 @@ const applyFilters = () => {
       });
     });
 
-    let categoryResourceIds = new Set(
-      categoryFilters.map((resource) => resource.id)
-    );
-    appliedFilters = [
-      ...categoryFilters,
-      ...projectTypeFilters.filter((resource) => {
-        return !categoryResourceIds.has(resource.id);
-      }),
-    ];
+    if (
+      filterCategoryConditions.length > 0 &&
+      filterProjectTypeConditions.length > 0
+    ) {
+      appliedFilters = categoryFilters.filter((resource) => {
+        return projectTypeFilters.includes(resource);
+      });
+    } else {
+      appliedFilters = categoryFilters.concat(projectTypeFilters);
+    }
+
+    // let categoryResourceIds = new Set(
+    //   categoryFilters.map((resource) => resource.id)
+    // );
+    // appliedFilters = [
+    //   ...categoryFilters,
+    //   ...projectTypeFilters.filter((resource) => {
+    //     return !categoryResourceIds.has(resource.id);
+    //   }),
+    // ];
   }
 
   clearCards();
