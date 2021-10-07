@@ -1,6 +1,7 @@
 // arrays for holding resource data
 const resourcesList = []; // initial list of resources loaded from JSON file
 let filteredResourcesList = []; // reusable list of resources that is a filtered version of resourcesList
+let sortState = '';
 
 // page elements
 const siteContainer = document.querySelector('#site-container'); // container for all the resources
@@ -95,8 +96,32 @@ const clearCards = () => {
 // sort resources alphabetically
 const sortCardsAtoZ = () => {
   let sortedResourcesList = [];
-  if (filteredResourcesList.length > 0) {
-    sortedResourcesList = filteredResourcesList.sort((a, b) => {
+  if (sortState === 'desc' || sortState === '') {
+    if (filteredResourcesList.length > 0) {
+      sortedResourcesList = sortList(filteredResourcesList, 'asc');
+    } else {
+      sortedResourcesList = sortList(resourcesList, 'asc');
+    }
+    sortState = 'asc';
+  } else {
+    if (filteredResourcesList.length > 0) {
+      sortedResourcesList = sortList(filteredResourcesList, 'desc');
+    } else {
+      sortedResourcesList = sortList(resourcesList, 'desc');
+    }
+    sortState = 'desc';
+  }
+
+  updateSortButton(sortState);
+  clearCards();
+  filteredResourcesList = sortedResourcesList;
+  const cards = buildCards(filteredResourcesList);
+  resourcesContainer.innerHTML = cards.join('');
+};
+
+const sortList = (list, order) => {
+  if (order === 'asc') {
+    return list.sort((a, b) => {
       if (a.title > b.title) {
         return 1;
       } else {
@@ -104,19 +129,24 @@ const sortCardsAtoZ = () => {
       }
     });
   } else {
-    sortedResourcesList = resourcesList.sort((a, b) => {
+    return list.sort((a, b) => {
       if (a.title > b.title) {
-        return 1;
-      } else {
         return -1;
+      } else {
+        return 1;
       }
     });
   }
+};
 
-  clearCards();
-  filteredResourcesList = sortedResourcesList;
-  const cards = buildCards(filteredResourcesList);
-  resourcesContainer.innerHTML = cards.join('');
+const updateSortButton = (order) => {
+  if (order === 'asc') {
+    aToZButton.style.backgroundColor = 'rgb(248, 224, 142)';
+    aToZButton.innerHTML = 'Sorted A - Z';
+  } else {
+    aToZButton.style.backgroundColor = 'rgb(248, 224, 142)';
+    aToZButton.innerHTML = 'Sorted Z - A';
+  }
 };
 
 // side panel toggle to hide and show
