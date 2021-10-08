@@ -12,7 +12,7 @@
       "category": "audio",
       "requires_training": false,
       "notes": "The microphone requires connection to a computer for usage",
-      "includes": ["microphone", "small tripod stand", "usb cable"]
+      "items_included": ["microphone", "small tripod stand", "usb cable"]
     },
     {
       "id": 2,
@@ -30,7 +30,7 @@
       "category": "audio",
       "requires_training": false,
       "notes": "Uses a USB Type-A connector",
-      "includes": ["microphone only"]
+      "items_included": ["microphone only"]
     },
     {
       "id": 3,
@@ -44,7 +44,7 @@
       "category": "audio",
       "requires_training": false,
       "notes": "Uses a unimatch plug sizes 1/4-inch and 1/8-inch",
-      "includes": ["headphones", "1/4-inch adapter"]
+      "items_included": ["headphones", "1/4-inch adapter"]
     },
     {
       "id": 4,
@@ -58,7 +58,7 @@
       "category": "video",
       "requires_training": false,
       "notes": "Smartphone adapter uses lightening or USB-C",
-      "includes": [
+      "items_included": [
         "DJI Pocket 2",
         "cover",
         "mini control stick",
@@ -81,7 +81,7 @@
       "category": "video",
       "requires_training": false,
       "notes": "Charged via included the USB-C cable",
-      "includes": [
+      "items_included": [
         "Tripod",
         "Power Stick",
         "Phone Holder",
@@ -103,7 +103,7 @@
       "category": "audio",
       "requires_training": false,
       "notes": "Battery can be charged while in the battery charger or inside the camera",
-      "includes": [
+      "items_included": [
         "carrying case",
         "18-55mm lens",
         "64GB SDXC memory card",
@@ -124,7 +124,7 @@
       "category": "video",
       "requires_training": false,
       "notes": "Photo Filter Thread Size is 67 millimeters",
-      "includes": [
+      "items_included": [
         "Canon EF-S 18-135mm Lens",
         "lens cap",
         "protective felt case"
@@ -142,7 +142,7 @@
       "category": "video",
       "requires_training": true,
       "notes": "Requires two AA alkaline batteries",
-      "includes": ["Canon Speedlite 600EX II-RT", "Mini Stand", "Case"]
+      "items_included": ["Canon Speedlite 600EX II-RT", "Mini Stand", "Case"]
     },
     {
       "id": 9,
@@ -156,7 +156,7 @@
       "category": "audio",
       "requires_training": true,
       "notes": "Requires training for first time use",
-      "includes": [
+      "items_included": [
         "Canon XA40 Professional UHD 4K Camcorder",
         "Canon CA-570 Compact AC Power Adapter",
         "Canon BP-820 Lithium-Ion Single Battery",
@@ -175,7 +175,7 @@
       "category": "video",
       "requires_training": false,
       "notes": "Battery can be charged while in the camera.",
-      "includes": [
+      "items_included": [
         "GoPro HERO9 Black",
         "64GB microSD memory card",
         "GoPro Rechargeable Li-Ion Battery",
@@ -194,7 +194,7 @@
       "category": "audio",
       "requires_training": false,
       "notes": "Has a locking 3.5mm connector",
-      "includes": [
+      "items_included": [
         "Sony Omnidirectional Lavalier Microphone",
         "Foam Windscreen",
         "Microphone Clip"
@@ -212,7 +212,7 @@
       "category": "audio",
       "requires_training": false,
       "notes": "Includes an slot for a microSD card",
-      "includes": ["Sony Digital Voice Recorder"]
+      "items_included": ["Sony Digital Voice Recorder"]
     },
     {
       "id": 13,
@@ -226,7 +226,7 @@
       "category": "software",
       "requires_training": false,
       "notes": "Available in the Library Media Room",
-      "includes": ["Adobe Photoshop"]
+      "items_included": ["Adobe Photoshop"]
     },
     {
       "id": 14,
@@ -240,7 +240,7 @@
       "category": "software",
       "requires_training": false,
       "notes": "Available in the Library Media Room",
-      "includes": ["Audacity"]
+      "items_included": ["Audacity"]
     },
     {
       "id": 15,
@@ -254,7 +254,7 @@
       "category": "software",
       "requires_training": false,
       "notes": "Available in the Library Media Room",
-      "includes": ["Final Cut Pro"]
+      "items_included": ["Final Cut Pro"]
     },
     {
       "id": 16,
@@ -268,7 +268,7 @@
       "category": "software",
       "requires_training": false,
       "notes": "Available in the Library Media Room",
-      "includes": ["Adobe Illustrator"]
+      "items_included": ["Adobe Illustrator"]
     },
     {
       "id": 17,
@@ -282,7 +282,7 @@
       "category": "audio",
       "requires_training": false,
       "notes": "Requires XLR Cable for connection to audio interface",
-      "includes": ["Shure SM58 Vocal Microphone"]
+      "items_included": ["Shure SM58 Vocal Microphone"]
     },
     {
       "id": 18,
@@ -296,7 +296,7 @@
       "category": "video",
       "requires_training": false,
       "notes": "",
-      "includes": ["Manfrotto 290 Tripod", "Shoulder Carrying Bag"]
+      "items_included": ["Manfrotto 290 Tripod", "Shoulder Carrying Bag"]
     }
   ]
 }
