@@ -13,6 +13,9 @@ const filterButton = document.querySelector('#filter-button'); // button to filt
 const resetFiltersButton = document.querySelector('#reset-filters-button');
 const aToZButton = document.querySelector('#a-to-z-button'); // button to sort resources in alphabetical order
 
+const resourcesSearchInput = document.querySelector('#resources-search'); // input for searching resources
+const clearSearchButton = document.querySelector('#clear-search'); // button to clear search input
+
 const sidePanel = document.querySelector('#side-panel'); // side panel for filter options
 
 // initial data load of resources
@@ -194,6 +197,17 @@ aToZButton.addEventListener('click', (e) => {
   sortCardsAtoZ();
 });
 
+resourcesSearchInput.addEventListener('input', (e) => {
+  let search = e.target.value;
+  searchResources(search);
+});
+
+clearSearchButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  resourcesSearchInput.value = '';
+  triggerEvent(resourcesSearchInput, 'input');
+});
+
 // filter process [TO BE REFACTORED]
 let filterCategoryConditions = [];
 let filterProjectTypeConditions = [];
@@ -210,8 +224,6 @@ const checkCategoryFilters = () => {
       filterCategoryConditions.push(checkbox.id.split('-')[0]);
     }
   });
-
-  console.log(filterCategoryConditions);
 
   applyFilters();
 };
@@ -230,8 +242,6 @@ const checkProductTypeFilters = () => {
       filterProjectTypeConditions.push(projectType);
     }
   });
-
-  console.log(filterProjectTypeConditions);
 
   applyFilters();
 };
@@ -274,6 +284,24 @@ const applyFilters = () => {
   filteredResourcesList = sortList(filteredResourcesList, sortState);
   const cards = buildCards(filteredResourcesList);
   resourcesContainer.innerHTML = cards.join('');
+};
+
+const searchResources = (search) => {
+  let searchMatches = [];
+
+  if (search.length > 0) {
+    searchMatches = resourcesList.filter((resource) => {
+      return resource.title.toLowerCase().includes(search.toLowerCase());
+    });
+
+    clearCards();
+    filteredResourcesList = searchMatches;
+    filteredResourcesList = sortList(filteredResourcesList, sortState);
+    const cards = buildCards(filteredResourcesList);
+    resourcesContainer.innerHTML = cards.join('');
+  } else {
+    applyFilters();
+  }
 };
 
 // add event listeners for category filter options
