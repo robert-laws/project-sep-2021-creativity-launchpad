@@ -271,6 +271,7 @@ const applyFilters = () => {
 
   clearCards();
   filteredResourcesList = appliedFilters;
+  filteredResourcesList = sortList(filteredResourcesList, sortState);
   const cards = buildCards(filteredResourcesList);
   resourcesContainer.innerHTML = cards.join('');
 };
