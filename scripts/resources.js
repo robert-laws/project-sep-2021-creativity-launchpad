@@ -1,23 +1,53 @@
-const resourcesList = [];
-let filteredResourcesList = [];
+// arrays for holding state data
+const resourcesList = []; // initial list of resources loaded from JSON file
+let filteredResourcesList = []; // reusable list of resources that is a filtered version of resourcesList
+let searchTerms = '';
+let sortState = '';
 
-const siteContainer = document.querySelector('.site-container');
-const resourcesContainer = document.querySelector('#cards-container');
-const resourcesTotal = document.querySelector('#cards-total');
+// page elements
+// entire visible page container upon loading
+const siteContainer = document.querySelector('#site-container'); // container for all the resources
 
-const filterButton = document.querySelector('#filter-button');
-const aToZButton = document.querySelector('#a-to-z-button');
-const clearCardsButton = document.querySelector('#clear-cards');
+// container for resource cards
+const cardsContainer = document.querySelector('#cards-container'); // container for all the cards
+const cardsTotal = document.querySelector('#cards-total'); // total number of cards
 
-const sidePanel = document.querySelector('#side-panel');
+// button area elements
+const filterButton = document.querySelector('#filter-button'); // button to filter resources
+const aToZButton = document.querySelector('#a-to-z-button'); // button to sort resources in alphabetical order
+const resourcesSearchInput = document.querySelector('#resources-search'); // input for searching resources
+const clearSearchButton = document.querySelector('#clear-search'); // button to clear search input
 
+// filter panel elements
+const sidePanel = document.querySelector('#side-panel'); // side panel for filter options
+const resetFiltersButton = document.querySelector('#reset-filters-button');
+
+// initial data load of resources, calls a function when the array is changed
 const getResourceData = async () => {
   const response = await fetch('./data/resources.json');
   const data = await response.json();
   resourcesList.pushWithEvent(...data.resources);
+  filteredResourcesList.push(...data.resources);
 };
 
-// https://jsvault.com/array-listener/
+// card template for resource cards
+const cardTemplate = (id, resource_image, title, short_description) => {
+  return `
+    <div class="card">
+      <a href="resource.html?id=${id}">
+        <figure>
+          <img src="images/${resource_image}" alt="${title}" />
+          <figcaption>
+            <h5 class="bold">${title}</h5>
+            <p>${short_description}</p>
+          </figcaption>
+        </figure>
+      </a>
+    </div>
+  `;
+};
+
+// add custom listener for array events on the resourcesList array
 Array.prototype.listeners = {};
 Array.prototype.addListener = function (event, callback) {
   if (!this.listeners[event]) {
@@ -45,79 +75,49 @@ Array.prototype.triggerEvent = function (eventName, elements) {
 
 resourcesList.addListener('add', (items, args) => {
   const cards = buildCards(args);
-  resourcesContainer.innerHTML = cards.join('');
+  updateTotalCards(cards.length);
+  addCardsArrayToDOM(cards);
 });
 
-const cardTemplate = ({ resource_image, title, short_description }) => {
-  return `
-    <div class="card">
-      <a href="resource.html">
-        <figure>
-          <img src="images/${resource_image}" alt="" />
-          <figcaption>
-            <h5 class="bold">${title}</h5>
-            <p>${short_description}</p>
-          </figcaption>
-        </figure>
-      </a>
-    </div>
-  `;
+// update cards within the DOM
+const addCardsArrayToDOM = (arrayList) => {
+  cardsContainer.innerHTML = arrayList.join('');
 };
 
+// transformation of resource data into cards
 const buildCards = (resourcesData) => {
   const cards = resourcesData.map(
-    ({ resource_image, title, short_description }) => {
-      return cardTemplate({ resource_image, title, short_description });
+    ({ id, resource_image, title, short_description }) => {
+      return cardTemplate(id, resource_image, title, short_description);
     }
   );
-
-  updateTotalCards(cards.length);
 
   return cards;
 };
 
-const updateTotalCards = (total) => {
-  resourcesTotal.innerHTML = `${total} Total Resources`;
-};
-
-const sortCardsAtoZ = () => {
-  let sortedResourcesList = [];
-  if (filteredResourcesList.length > 0) {
-    sortedResourcesList = filteredResourcesList.sort((a, b) => {
-      if (a.title > b.title) {
-        return 1;
-      } else {
-        return -1;
-      }
-    });
-  } else {
-    sortedResourcesList = resourcesList.sort((a, b) => {
-      if (a.title > b.title) {
-        return 1;
-      } else {
-        return -1;
-      }
-    });
-  }
-
+// process changes to list
+const processResources = (workingArray) => {
   clearCards();
-  filteredResourcesList = sortedResourcesList;
+
+  filteredResourcesList = workingArray;
+  filteredResourcesList = sortList(filteredResourcesList, sortState);
   const cards = buildCards(filteredResourcesList);
-  resourcesContainer.innerHTML = cards.join('');
+
+  updateTotalCards(cards.length);
+  addCardsArrayToDOM(cards);
 };
 
+// update the total number of cards for display
+const updateTotalCards = (total) => {
+  cardsTotal.innerHTML = `${total} Total Resources`;
+};
+
+// remove all cards from the cards container
 const clearCards = () => {
-  resourcesContainer.innerHTML = '';
+  cardsContainer.innerHTML = '';
 };
 
-// const toggleSidePanel = () => {
-//   if (sidePanel.classList.contains('side-panel-open')) {
-//     sidePanel.classList.remove('side-panel-open');
-//   } else {
-//     sidePanel.classList.add('side-panel-open');
-//   }
-// };
-
+// side panel toggle to hide and show
 const handleToggle = (e) => {
   const toggleMenu = () => sidePanel.classList.toggle('side-panel-open');
   if (!sidePanel.classList.contains('side-panel-open')) {
@@ -136,51 +136,77 @@ const addOffClick = (e, callback) => {
   siteContainer.addEventListener('click', offClick);
 };
 
+// add event listeners to filter button
 filterButton.addEventListener('click', handleToggle);
 
-aToZButton.addEventListener('click', sortCardsAtoZ);
+// function to trigger events for one event listener from other event
+const triggerElementEvent = (element, eventName) => {
+  const event = new Event(eventName);
+  element.dispatchEvent(event);
+};
 
-clearCardsButton.addEventListener('click', clearCards);
+// add event listeners to reset filter options
+resetFiltersButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  const filterCheckboxes = document.querySelectorAll(
+    '.side-panel .option-item input[type="checkbox"]'
+  );
+  filterCheckboxes.forEach((checkbox) => {
+    checkbox.checked = false;
+    triggerElementEvent(checkbox, 'change');
+  });
+});
 
+// add event listeners to aToZ button
+aToZButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  sortCardsAtoZ();
+});
+
+// search resources
+resourcesSearchInput.addEventListener('input', (e) => {
+  let search = e.target.value;
+  // searchResources(search);
+  searchTerms = search;
+  checkAllOptions();
+});
+
+clearSearchButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  resourcesSearchInput.value = '';
+  triggerElementEvent(resourcesSearchInput, 'input');
+});
+
+// filter resources
 let filterCategoryConditions = [];
 let filterProjectTypeConditions = [];
 
-const checkCategoryFilters = () => {
-  const checkboxes = document.querySelectorAll(
-    '.category-filter-options input[type="checkbox"]'
-  );
-
-  filterCategoryConditions = [];
+// loop through all category checkboxes and add checked to array
+// REFACTOR
+// abstracted version of getting filter checked options
+const findCheckedOptions = (event) => {
+  checkboxArray = [];
+  const checkboxGroup = event.currentTarget.groupName;
+  const checkboxes = document.querySelectorAll(event.currentTarget.domName);
 
   checkboxes.forEach((checkbox) => {
     if (checkbox.checked) {
-      filterCategoryConditions.push(checkbox.id.split('-')[0]);
+      let item = checkbox.id.split('-');
+      item = item.slice(0, item.length - 1).join(' ');
+      checkboxArray.push(item);
     }
   });
 
-  console.log(filterCategoryConditions);
-
-  applyFilters();
+  updateFilterConditions(checkboxGroup, checkboxArray);
+  checkAllOptions();
 };
 
-const checkProductTypeFilters = () => {
-  const checkboxes = document.querySelectorAll(
-    '.project-type-filter-options input[type="checkbox"]'
-  );
-
-  filterProjectTypeConditions = [];
-
-  checkboxes.forEach((checkbox) => {
-    if (checkbox.checked) {
-      let projectType = checkbox.id.split('-');
-      projectType = projectType.slice(0, projectType.length - 1).join(' ');
-      filterProjectTypeConditions.push(projectType);
-    }
-  });
-
-  console.log(filterProjectTypeConditions);
-
-  applyFilters();
+const updateFilterConditions = (group, array) => {
+  if (group === 'category') {
+    filterCategoryConditions = array;
+  } else if (group === 'project-type') {
+    filterProjectTypeConditions = array;
+  }
 };
 
 const applyFilters = () => {
@@ -214,64 +240,130 @@ const applyFilters = () => {
     } else {
       appliedFilters = categoryFilters.concat(projectTypeFilters);
     }
-
-    // let categoryResourceIds = new Set(
-    //   categoryFilters.map((resource) => resource.id)
-    // );
-    // appliedFilters = [
-    //   ...categoryFilters,
-    //   ...projectTypeFilters.filter((resource) => {
-    //     return !categoryResourceIds.has(resource.id);
-    //   }),
-    // ];
   }
 
-  clearCards();
-  filteredResourcesList = appliedFilters;
-  const cards = buildCards(filteredResourcesList);
-  resourcesContainer.innerHTML = cards.join('');
+  return appliedFilters;
 };
 
-// audioFilter.addEventListener('click', (e) => {
-//   checkCategoryFilters();
-//   // const checked = e.target.checked;
-//   // if (checked) {
-//   //   filteredResourcesList = resourcesList.filter(
-//   //     (resource) => resource.category === 'audio'
-//   //   );
+// search resources
+const searchResources = () => {
+  let searchMatches = [];
 
-//   //   clearCards();
-//   //   const cards = buildCards(filteredResourcesList);
-//   //   resourcesContainer.innerHTML = cards.join('');
-//   // }
-// });
+  if (searchTerms.length > 0) {
+    searchMatches = resourcesList.filter((resource) => {
+      return resource.title.toLowerCase().includes(searchTerms.toLowerCase());
+    });
+  }
 
-// videoFilter.addEventListener('click', (e) => {
-//   checkCategoryFilters();
-// });
+  return searchMatches;
+};
 
-// softwareFilter.addEventListener('click', (e) => {
-//   checkCategoryFilters();
-// });
+// sort resources alphabetically
+const sortCardsAtoZ = () => {
+  if (filteredResourcesList.length > 0) {
+    if (sortState === 'desc' || sortState === '') {
+      sortState = 'asc';
+    } else {
+      sortState = 'desc';
+    }
+    updateSortButton(sortState);
 
+    processResources(filteredResourcesList);
+  }
+};
+
+const sortList = (list, order) => {
+  if (order === 'asc') {
+    return list.sort((a, b) => {
+      if (a.title > b.title) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+  } else {
+    return list.sort((a, b) => {
+      if (a.title > b.title) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+  }
+};
+
+const updateSortButton = (order) => {
+  if (order === 'asc') {
+    aToZButton.style.backgroundColor = 'rgb(248, 224, 142)';
+    aToZButton.innerHTML = 'Sorted A - Z';
+  } else {
+    aToZButton.style.backgroundColor = 'rgb(248, 224, 142)';
+    aToZButton.innerHTML = 'Sorted Z - A';
+  }
+};
+
+// add event listeners for category filter options
 (function () {
-  const checkboxes = document.querySelectorAll(
-    '.category-filter-options input[type="checkbox"]'
-  );
+  const domLocation = '.category-filter-options input[type="checkbox"]';
+  const checkboxes = document.querySelectorAll(domLocation);
 
   checkboxes.forEach((checkbox) => {
-    checkbox.addEventListener('click', checkCategoryFilters);
+    checkbox.addEventListener('change', findCheckedOptions);
+    checkbox.domName = domLocation;
+    checkbox.groupName = 'category';
   });
 })();
 
+// add event listeners for project type filter options
 (function () {
-  const checkboxes = document.querySelectorAll(
-    '.project-type-filter-options input[type="checkbox"]'
-  );
+  const domLocation = '.project-type-filter-options input[type="checkbox"]';
+  const checkboxes = document.querySelectorAll(domLocation);
 
   checkboxes.forEach((checkbox) => {
-    checkbox.addEventListener('click', checkProductTypeFilters);
+    checkbox.addEventListener('change', findCheckedOptions);
+    checkbox.domName = domLocation;
+    checkbox.groupName = 'project-type';
   });
 })();
+
+const checkAllOptions = () => {
+  const originalArray = resourcesList;
+
+  const filterResults = applyFilters();
+  const searchResults = searchResources(searchTerms);
+
+  if (filterResults.length === 0 && searchResults.length === 0) {
+    if (
+      filterCategoryConditions.length > 0 ||
+      filterProjectTypeConditions.length > 0 ||
+      searchTerms.length > 0
+    ) {
+      filteredResourcesList = [];
+    } else {
+      filteredResourcesList = originalArray;
+    }
+  } else if (filterResults.length === 0 && searchResults.length > 0) {
+    if (
+      filterCategoryConditions.length > 0 ||
+      filterProjectTypeConditions.length > 0
+    ) {
+      filteredResourcesList = [];
+    } else {
+      filteredResourcesList = searchResults;
+    }
+  } else if (filterResults.length > 0 && searchResults.length === 0) {
+    if (searchTerms.length > 0) {
+      filteredResourcesList = [];
+    } else {
+      filteredResourcesList = filterResults;
+    }
+  } else {
+    filteredResourcesList = filterResults.filter((resource) => {
+      return searchResults.includes(resource);
+    });
+  }
+
+  processResources(filteredResourcesList);
+};
 
 getResourceData();

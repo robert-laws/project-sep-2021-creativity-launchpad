@@ -5,28 +5,27 @@ let sortState = '';
 
 // page elements
 const siteContainer = document.querySelector('#site-container'); // container for all the resources
-const resourcesContainer = document.querySelector('#cards-container'); // container for all the resources
 const cardsContainer = document.querySelector('#cards-container'); // container for all the cards
 const cardsTotal = document.querySelector('#cards-total'); // total number of cards
 
 const filterButton = document.querySelector('#filter-button'); // button to filter resources
-const resetFiltersButton = document.querySelector('#reset-filters-button');
 const aToZButton = document.querySelector('#a-to-z-button'); // button to sort resources in alphabetical order
-
 const resourcesSearchInput = document.querySelector('#resources-search'); // input for searching resources
 const clearSearchButton = document.querySelector('#clear-search'); // button to clear search input
 
 const sidePanel = document.querySelector('#side-panel'); // side panel for filter options
+const resetFiltersButton = document.querySelector('#reset-filters-button');
 
 // initial data load of resources
 const getResourceData = async () => {
   const response = await fetch('./data/resources.json');
   const data = await response.json();
   resourcesList.pushWithEvent(...data.resources);
+  filteredResourcesList.push(...data.resources);
 };
 
 // card template for resource cards
-const cardTemplate = ({ resource_image, title, short_description }) => {
+const cardTemplate = ({ id, resource_image, title, short_description }) => {
   return `
     <div class="card">
       <a href="resource.html">
@@ -68,16 +67,22 @@ Array.prototype.triggerEvent = function (eventName, elements) {
   }
 };
 
+// update cards within the DOM
+const addCardsArrayToDOM = (arrayList) => {
+  cardsContainer.innerHTML = arrayList.join('');
+};
+
 resourcesList.addListener('add', (items, args) => {
   const cards = buildCards(args);
-  cardsContainer.innerHTML = cards.join('');
+  addCardsArrayToDOM(cards);
+  updateTotalCards(cards.length);
 });
 
 // transformation of resource data into cards
 const buildCards = (resourcesData) => {
   const cards = resourcesData.map(
-    ({ resource_image, title, short_description }) => {
-      return cardTemplate({ resource_image, title, short_description });
+    ({ id, resource_image, title, short_description }) => {
+      return cardTemplate({ id, resource_image, title, short_description });
     }
   );
 
@@ -93,7 +98,7 @@ const updateTotalCards = (total) => {
 
 // remove all cards from the cards container
 const clearCards = () => {
-  resourcesContainer.innerHTML = '';
+  cardsContainer.innerHTML = '';
 };
 
 // sort resources alphabetically
@@ -119,7 +124,7 @@ const sortCardsAtoZ = () => {
   clearCards();
   filteredResourcesList = sortedResourcesList;
   const cards = buildCards(filteredResourcesList);
-  resourcesContainer.innerHTML = cards.join('');
+  cardsContainer.innerHTML = cards.join('');
 };
 
 const sortList = (list, order) => {
@@ -182,11 +187,11 @@ resetFiltersButton.addEventListener('click', (e) => {
   );
   filterCheckboxes.forEach((checkbox) => {
     checkbox.checked = false;
-    triggerEvent(checkbox, 'change');
+    triggerElementEvent(checkbox, 'change');
   });
 });
 
-const triggerEvent = (element, eventName) => {
+const triggerElementEvent = (element, eventName) => {
   const event = new Event(eventName);
   element.dispatchEvent(event);
 };
@@ -205,23 +210,22 @@ resourcesSearchInput.addEventListener('input', (e) => {
 clearSearchButton.addEventListener('click', (e) => {
   e.preventDefault();
   resourcesSearchInput.value = '';
-  triggerEvent(resourcesSearchInput, 'input');
+  triggerElementEvent(resourcesSearchInput, 'input');
 });
 
 // filter process [TO BE REFACTORED]
 let filterCategoryConditions = [];
 let filterProjectTypeConditions = [];
 
-const checkCategoryFilters = () => {
-  const checkboxes = document.querySelectorAll(
-    '.category-filter-options input[type="checkbox"]'
-  );
-
+const checkCategoryFilters = (event) => {
   filterCategoryConditions = [];
+  const checkboxes = document.querySelectorAll(event.currentTarget.myParam);
 
   checkboxes.forEach((checkbox) => {
     if (checkbox.checked) {
-      filterCategoryConditions.push(checkbox.id.split('-')[0]);
+      let category = checkbox.id.split('-');
+      category = category.slice(0, category.length - 1).join(' ');
+      filterCategoryConditions.push(category);
     }
   });
 
@@ -283,14 +287,14 @@ const applyFilters = () => {
   filteredResourcesList = appliedFilters;
   filteredResourcesList = sortList(filteredResourcesList, sortState);
   const cards = buildCards(filteredResourcesList);
-  resourcesContainer.innerHTML = cards.join('');
+  cardsContainer.innerHTML = cards.join('');
 };
 
 const searchResources = (search) => {
   let searchMatches = [];
 
   if (search.length > 0) {
-    searchMatches = resourcesList.filter((resource) => {
+    searchMatches = filteredResourcesList.filter((resource) => {
       return resource.title.toLowerCase().includes(search.toLowerCase());
     });
 
@@ -298,7 +302,7 @@ const searchResources = (search) => {
     filteredResourcesList = searchMatches;
     filteredResourcesList = sortList(filteredResourcesList, sortState);
     const cards = buildCards(filteredResourcesList);
-    resourcesContainer.innerHTML = cards.join('');
+    cardsContainer.innerHTML = cards.join('');
   } else {
     applyFilters();
   }
@@ -306,12 +310,12 @@ const searchResources = (search) => {
 
 // add event listeners for category filter options
 (function () {
-  const checkboxes = document.querySelectorAll(
-    '.category-filter-options input[type="checkbox"]'
-  );
+  const domLocation = '.category-filter-options input[type="checkbox"]';
+  const checkboxes = document.querySelectorAll(domLocation);
 
   checkboxes.forEach((checkbox) => {
     checkbox.addEventListener('change', checkCategoryFilters);
+    checkbox.myParam = domLocation;
   });
 })();
 
