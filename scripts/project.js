@@ -182,7 +182,7 @@ const projectText = (project_content) => {
 };
 
 const updatePageTitle = (title) => {
-  document.title = `${title} | Resource`;
+  document.title = `${title} | Project`;
 };
 
 getProjectDataById(projectId);

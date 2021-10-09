@@ -126,7 +126,7 @@ const articleText = (article_content) => {
 };
 
 const updatePageTitle = (title) => {
-  document.title = `${title} | Resource`;
+  document.title = `${title} | Article`;
 };
 
 const formatDate = (date) => {
