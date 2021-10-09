@@ -9,11 +9,26 @@ if (!params.has('id')) {
 const projectLeadElement = document.querySelector('#project-lead');
 const projectTextElement = document.querySelector('#project-text');
 
+const cardsContainer = document.querySelector('#cards-container'); // container for all the cards
+const cardsTotal = document.querySelector('#cards-total'); // total number of cards
+
 const projectId = params.get('id');
 const projectData = [];
 
 const getProjectData = async () => {
   const response = await fetch('./data/projects.json');
+
+  if (!response.ok) {
+    const message = `An error has occurred: ${response.status}`;
+    throw new Error(message);
+  }
+
+  const data = await response.json();
+  return data;
+};
+
+const getRelatedResourcesData = async () => {
+  const response = await fetch('./data/resources.json');
 
   if (!response.ok) {
     const message = `An error has occurred: ${response.status}`;
@@ -35,6 +50,21 @@ const getProjectDataById = (id) => {
       } else {
         window.location.href = '404.html';
       }
+
+      return projectData;
+    })
+    .then((data) => {
+      const projectType = data[0].project_type;
+
+      getRelatedResourcesData().then((resourcesData) => {
+        const relatedResourcesData = resourcesData.resources.filter(
+          (resource) => resource.projects.includes(projectType)
+        );
+
+        const cards = buildCards(relatedResourcesData);
+        updateTotalCards(cards.length);
+        addCardsArrayToDOM(cards);
+      });
     })
     .catch((error) => {
       document.querySelector('#main-content').innerHTML = `
@@ -85,6 +115,44 @@ projectData.addListener('add', (items, args) => {
 
   updatePageTitle(title);
 });
+
+// update the total number of cards for display
+const updateTotalCards = (total) => {
+  cardsTotal.innerHTML = `${total} Total Resources`;
+};
+
+// update cards within the DOM
+const addCardsArrayToDOM = (arrayList) => {
+  cardsContainer.innerHTML = arrayList.join('');
+};
+
+// transformation of resource data into cards
+const buildCards = (resourcesData) => {
+  const cards = resourcesData.map(
+    ({ id, resource_image, title, short_description }) => {
+      return cardTemplate(id, resource_image, title, short_description);
+    }
+  );
+
+  return cards;
+};
+
+// card template for resource cards
+const cardTemplate = (id, resource_image, title, short_description) => {
+  return `
+    <div class="card">
+      <a href="resource.html?id=${id}">
+        <figure>
+          <img src="images/${resource_image}" alt="${title}" />
+          <figcaption>
+            <h5 class="bold">${title}</h5>
+            <p>${short_description}</p>
+          </figcaption>
+        </figure>
+      </a>
+    </div>
+  `;
+};
 
 const projectLead = (title, featured_image, description) => {
   return `

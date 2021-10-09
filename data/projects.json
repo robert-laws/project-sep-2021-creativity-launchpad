@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Poster Presentation Creation",
-      "short_title": "poster presentation",
+      "project_type": "poster creation",
       "featured_image": "project-poster.jpg",
       "description": "This project is about graphic design and creating a high-quality presentation for class assignments or conference presentations. The process of creating an attractive poster presentation is about understanding graphic design and building skill in software specifically designed for creating this type of content.",
       "project_content": [
@@ -36,7 +36,7 @@
     {
       "id": 2,
       "title": "Basic Audio Recording",
-      "short_title": "audio recording",
+      "project_type": "audio recording",
       "featured_image": "project-podcast.jpg",
       "description": "This project is about graphic design and creating a high-quality presentation for class assignments or conference presentations. The process of creating an attractive poster presentation is about understanding graphic design and building skill in software specifically designed for creating this type of content.",
       "project_content": [
@@ -68,8 +68,8 @@
     },
     {
       "id": 3,
-      "title": "Basic Vlog",
-      "short_title": "vlog",
+      "title": "Basic Vlogging Project",
+      "project_type": "vlog recording",
       "featured_image": "project-vlog.jpg",
       "description": "This project is about graphic design and creating a high-quality presentation for class assignments or conference presentations. The process of creating an attractive poster presentation is about understanding graphic design and building skill in software specifically designed for creating this type of content.",
       "project_content": [
@@ -102,7 +102,7 @@
     {
       "id": 4,
       "title": "Advanced Film Production",
-      "short_title": "video recording",
+      "project_type": "video recording",
       "featured_image": "project-film.jpg",
       "description": "This project is about graphic design and creating a high-quality presentation for class assignments or conference presentations. The process of creating an attractive poster presentation is about understanding graphic design and building skill in software specifically designed for creating this type of content.",
       "project_content": [
