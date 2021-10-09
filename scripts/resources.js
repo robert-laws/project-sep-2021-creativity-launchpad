@@ -3,6 +3,7 @@ const resourcesList = []; // initial list of resources loaded from JSON file
 let filteredResourcesList = []; // reusable list of resources that is a filtered version of resourcesList
 let searchTerms = '';
 let sortState = '';
+let panelOpenState = false;
 
 // page elements
 // entire visible page container upon loading
@@ -21,6 +22,7 @@ const clearSearchButton = document.querySelector('#clear-search'); // button to 
 // filter panel elements
 const sidePanel = document.querySelector('#side-panel'); // side panel for filter options
 const resetFiltersButton = document.querySelector('#reset-filters-button');
+const sidePanelCloseButton = document.querySelector('#side-panel-close');
 
 // initial data load of resources, calls a function when the array is changed
 const getResourceData = async () => {
@@ -157,8 +159,59 @@ const addOffClick = (e, callback) => {
   siteContainer.addEventListener('click', offClick);
 };
 
+const handleSidePanelToggle = (e) => {
+  if (e.target.name === 'open-panel-button') {
+    panelOpenState = true;
+    sidePanel.classList.add('side-panel-open');
+    sidePanel.classList.add('side-pane-visible');
+    sidePanelCloseButton.focus();
+  } else {
+    if (panelOpenState === true) {
+      panelOpenState = false;
+      sidePanel.classList.remove('side-panel-open');
+      delayPanelVisibility();
+      filterButton.focus();
+    }
+  }
+};
+
+const delayPanelVisibility = () => {
+  setTimeout(() => {
+    sidePanel.classList.remove('side-pane-visible');
+  }, 500);
+};
+
+document.addEventListener('keydown', function (e) {
+  if (panelOpenState) {
+    let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+
+    if (!isTabPressed) {
+      return;
+    }
+
+    if (e.shiftKey) {
+      // if shift key pressed for shift + tab combination
+      if (document.activeElement === sidePanelCloseButton) {
+        resetFiltersButton.focus(); // add focus for the last focusable element
+        e.preventDefault();
+      }
+    } else {
+      // if tab key is pressed
+      if (document.activeElement === resetFiltersButton) {
+        // if focused has reached to last focusable element then focus first focusable element after pressing tab
+        sidePanelCloseButton.focus(); // add focus for the first focusable element
+        e.preventDefault();
+      }
+    }
+  }
+});
+
 // add event listeners to filter button
-filterButton.addEventListener('click', handleToggle);
+filterButton.addEventListener('click', handleSidePanelToggle);
+
+sidePanelCloseButton.addEventListener('click', handleSidePanelToggle);
+
+siteContainer.addEventListener('click', handleSidePanelToggle);
 
 // function to trigger events for one event listener from other event
 const triggerElementEvent = (element, eventName) => {

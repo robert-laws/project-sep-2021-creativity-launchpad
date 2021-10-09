@@ -1465,13 +1465,28 @@ aside.cards-section {
   gap: 2rem;
 }
 
-/* PANEL INPUT VISIBILITY - TABBING ISSUE */
-/* .side-panel .panel-options {
-  visibility: hidden;
-} */
-
 .side-panel > div {
   grid-column: 2 / 3;
+}
+
+.side-panel-close {
+  place-self: end;
+  cursor: pointer;
+}
+
+.side-panel-close svg {
+  transition: all 0.1s ease-in;
+}
+
+.side-panel-close:hover svg,
+.side-panel-close:active svg {
+  fill: var(--pantone-202);
+}
+
+.side-panel-close:focus svg {
+  fill: var(--pantone-202);
+  border: 1px solid var(--pantone-293);
+  /* outline: auto; */
 }
 
 .side-panel .option-item label {
@@ -1483,9 +1498,13 @@ aside.cards-section {
 }
 
 /* PANEL INPUT VISIBILITY - TABBING ISSUE */
-/* .side-panel-open .panel-options {
+.side-panel {
+  visibility: hidden;
+}
+
+.side-panel.side-pane-visible {
   visibility: visible !important;
-} */
+}
 
 .side-panel .panel-title {
   font-size: var(--large-text);
