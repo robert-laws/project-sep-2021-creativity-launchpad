@@ -67,8 +67,8 @@ projectsList.addListener('add', (items, args) => {
 
 // transformation of resource data into cards
 const buildCards = (data) => {
-  const cards = data.map(({ id, featured_image, title }) => {
-    return cardTemplate(id, featured_image, title);
+  const cards = data.map(({ id, featured_image, title, project_type }) => {
+    return cardTemplate(id, featured_image, title, project_type);
   });
 
   return cards;
@@ -84,10 +84,10 @@ const addCardsArrayToDOM = (arrayList) => {
   cardsContainer.innerHTML = arrayList.join('');
 };
 
-const cardTemplate = (id, featured_image, title) => {
+const cardTemplate = (id, featured_image, title, project_type) => {
   return `
     <div class='card'>
-      <a href='project.html?id=${id}'>
+      <a href='project.html?id=${project_type.split(' ').join('-')}'>
         <figure>
           <img src='images/${featured_image}' alt='${title}' />
           <figcaption>

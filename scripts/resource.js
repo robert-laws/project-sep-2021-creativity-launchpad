@@ -196,7 +196,7 @@ const getProjectsList = (projects) => {
   if (projects.length > 0) {
     projectsList += '<h6>Featured in Projects</h6>';
     projects.forEach((project) => {
-      projectsList += `<a class="button tag green" href="project.html?project=${project
+      projectsList += `<a class="button tag green" href="project.html?id=${project
         .split(' ')
         .join('-')}">${project.toUpperCase()}</a>`;
     });

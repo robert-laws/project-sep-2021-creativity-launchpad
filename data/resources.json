@@ -8,7 +8,7 @@
       "secondary_image": "blue-ice-microphone-centered.jpg",
       "short_description": "Basic USB Microphone",
       "long_description": "Blue Snowball iCE is a stylish, entry USB mic with an attractive price tag. Unlike the similar-shaped Samson Meteorite, it is not as blatantly hot and it has a detachable USB cable with a solid Type B connector. The midrange is by far superior and technically, it produces a much more accurate sound than the former.",
-      "projects": ["podcast recording", "recorded presentation"],
+      "projects": ["audio recording", "recorded presentation"],
       "category": "audio",
       "requires_training": false,
       "notes": "The microphone requires connection to a computer for usage",

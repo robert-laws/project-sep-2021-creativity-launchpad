@@ -191,6 +191,7 @@ li {
 
 .button.tag {
   font-size: 1.2rem;
+  margin: 0.5rem;
   padding: 1.25rem 1.75rem;
   border-radius: 1.2rem;
 }

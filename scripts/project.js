@@ -12,7 +12,7 @@ const projectTextElement = document.querySelector('#project-text');
 const cardsContainer = document.querySelector('#cards-container'); // container for all the cards
 const cardsTotal = document.querySelector('#cards-total'); // total number of cards
 
-const projectId = params.get('id');
+const projectType = params.get('id').split('-').join(' ');
 const projectData = [];
 
 const getProjectData = async () => {
@@ -39,11 +39,11 @@ const getRelatedResourcesData = async () => {
   return data;
 };
 
-const getProjectDataById = (id) => {
+const getProjectDataById = (projectType) => {
   getProjectData()
     .then((allData) => {
       const data = allData.projects.find(
-        (project) => project.id === parseInt(id)
+        (project) => project.project_type === projectType
       );
       if (data) {
         projectData.pushWithEvent(data);
@@ -185,4 +185,4 @@ const updatePageTitle = (title) => {
   document.title = `${title} | Project`;
 };
 
-getProjectDataById(projectId);
+getProjectDataById(projectType);
