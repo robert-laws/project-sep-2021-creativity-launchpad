@@ -1,7 +1,7 @@
 // Article Content
 const params = new URLSearchParams(window.location.search);
 if (!params.has('id')) {
-  window.location.href = 'index.html';
+  window.location.href = '404.html';
 }
 
 // resource page components

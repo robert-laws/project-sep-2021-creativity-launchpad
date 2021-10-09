@@ -1,6 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 if (!params.has('id')) {
-  window.location.href = 'index.html';
+  window.location.href = '404.html';
 }
 
 // resource page components
@@ -16,12 +16,26 @@ const resourceDetailsImageElement = document.querySelector(
 const resourceId = params.get('id');
 const resourcesData = [];
 
-const getResourceData = async (id) => {
+const getResourceData = async () => {
   const response = await fetch('./data/resources.json');
   const data = await response.json();
-  resourcesData.pushWithEvent(
-    data.resources.find((resource) => resource.id === parseInt(id))
-  );
+  return data;
+};
+
+const getResourceDataById = (id) => {
+  const data = getResourceData(id);
+  if (data.length > 0) {
+    const resource = data.resources.find(
+      (resource) => resource.id === parseInt(id)
+    );
+    if (resource) {
+      resourcesData.pushWithEvent(resource);
+    } else {
+      window.location.href = '404.html';
+    }
+  } else {
+    window.location.href = '404.html';
+  }
 };
 
 // add custom listener for array events on the resourcesList array
@@ -199,4 +213,4 @@ const updatePageTitle = (title) => {
   document.title = `${title} | Resource`;
 };
 
-getResourceData(resourceId);
+getResourceDataById(resourceId);

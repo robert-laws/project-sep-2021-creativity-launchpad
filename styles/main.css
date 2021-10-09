@@ -949,6 +949,27 @@ main.home-page {
   font-size: var(--h6-heading);
 }
 
+.page-not-found {
+  width: 100%;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.page-not-found h2 {
+  font-size: var(--xl2-text);
+  color: var(--pantone-202);
+}
+
+.page-not-found p,
+.page-not-found a {
+  font-size: var(--large-text);
+}
+
 @media (min-width: 1200px) {
   /* .button {
     padding: 1.5rem 1.5rem;
@@ -1349,6 +1370,10 @@ main.home-page {
     border-top: var(--primary-color-gray-light) solid 1px;
     padding-top: 6rem;
     margin: 6rem 0;
+  }
+
+  .page-not-found {
+    height: 600px;
   }
 }
 
