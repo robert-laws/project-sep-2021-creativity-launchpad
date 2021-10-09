@@ -7,6 +7,7 @@ if (!params.has('id')) {
 
 // resource page components
 const projectLeadElement = document.querySelector('#project-lead');
+const projectTextElement = document.querySelector('#project-text');
 
 const projectId = params.get('id');
 const projectData = [];
@@ -72,13 +73,15 @@ Array.prototype.triggerEvent = function (eventName, elements) {
 };
 
 projectData.addListener('add', (items, args) => {
-  const { title, featured_image, description } = args[0];
+  const { title, featured_image, description, project_content } = args[0];
 
   projectLeadElement.innerHTML = projectLead(
     title,
     featured_image,
     description
   );
+
+  projectTextElement.innerHTML = projectText(project_content);
 
   updatePageTitle(title);
 });
@@ -95,6 +98,19 @@ const projectLead = (title, featured_image, description) => {
     </figure>
     <h4>${description}</h4>
   `;
+};
+
+const projectText = (project_content) => {
+  projectFullText = '';
+
+  project_content.forEach((section) => {
+    projectFullText += `<h2>${section.section_heading}</h2>`;
+    projectFullText += section.paragraphs
+      .map((paragraph) => `<p>${paragraph}</p>`)
+      .join('');
+  });
+
+  return projectFullText;
 };
 
 const updatePageTitle = (title) => {
