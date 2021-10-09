@@ -756,6 +756,14 @@ main.home-page {
   grid-column: 1 / -1;
 }
 
+.article-lead span {
+  font-size: var(--small-text);
+  font-family: var(--sans-serif-font);
+  color: var(--primary-color-gray);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
 .article-lead figure {
   grid-column: 1 / -1;
 }
@@ -1307,7 +1315,7 @@ main.home-page {
 
   .article-lead h4 {
     font-family: var(--sans-serif-font);
-    grid-column: 1 / 2;
+    grid-column: 1 / -1;
   }
 
   .article-lead img {
