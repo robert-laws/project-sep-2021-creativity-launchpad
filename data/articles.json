@@ -1,8 +1,32 @@
 {
   "articles": [
-    { "id": 1, "title": "Making a Video on a Short Deadline" },
-    { "id": 2, "title": "Creating a Personal Video Reflection" },
-    { "id": 3, "title": "Making a Basic Podcast" },
-    { "id": 4, "title": "Creating a Poster Presentation" }
+    {
+      "id": 1,
+      "title": "Making a Podcast Recording on a Short Deadline",
+      "featured_image": "blue-ice-microphone-action.jpg",
+      "category": "audio",
+      "pub_date": "10-8-2021"
+    },
+    {
+      "id": 2,
+      "title": "Making a Basic Podcast",
+      "featured_image": "project-podcast.jpg",
+      "category": "video",
+      "pub_date": "10-2-2021"
+    },
+    {
+      "id": 3,
+      "title": "Creating a Personal Video Reflection",
+      "featured_image": "project-vlog.jpg",
+      "category": "audio",
+      "pub_date": "9-27-2021"
+    },
+    {
+      "id": 4,
+      "title": "Creating a Poster Presentation",
+      "featured_image": "project-poster.jpg",
+      "category": "graphic design",
+      "pub_date": "8-19-2021"
+    }
   ]
 }

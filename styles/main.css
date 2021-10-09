@@ -703,6 +703,14 @@ main.home-page {
   margin: 1rem 0;
 }
 
+.article-content span {
+  font-size: var(--small-text);
+  font-family: var(--sans-serif-font);
+  color: var(--primary-color-gray);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
 .article-content h3 {
   color: var(--pantone-202);
 }
@@ -1275,7 +1283,7 @@ main.home-page {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
 
     padding-left: 5rem;
