@@ -83,89 +83,17 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
 
-    <title>All Resources</title>
+    <title>All Projects</title>
 
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/main.css" />
 
-    <script src="scripts/resources.js" defer></script>
+    <script src="scripts/projects.js" defer></script>
   </head>
   <body>
     <a id="skip-link" href="#main-content">Skip to Content</a>
-    <div id="side-panel" class="side-panel">
-      <div class="panel-title">Select filter options</div>
-      <div class="panel-options category-filter-options">
-        <div class="panel-options-title">Resource Category</div>
-        <div class="option-item">
-          <input type="checkbox" id="audio-option" />
-          <label for="audio-option">Audio</label>
-        </div>
-        <div class="option-item">
-          <input type="checkbox" id="video-option" />
-          <label for="video-option">Video</label>
-        </div>
-        <div class="option-item">
-          <input type="checkbox" id="software-option" />
-          <label for="software-option">Software</label>
-        </div>
-      </div>
-      <hr />
-      <div class="panel-options project-type-filter-options">
-        <div class="panel-options-title">Project Type</div>
-        <div class="option-item">
-          <input type="checkbox" id="video-recording-option" />
-          <label for="video-recording-option">Video Recording</label>
-        </div>
-        <div class="option-item">
-          <input type="checkbox" id="video-editing-option" />
-          <label for="video-editing-option">Video Editing</label>
-        </div>
-        <div class="option-item">
-          <input type="checkbox" id="audio-recording-option" />
-          <label for="audio-recording-option">Audio Recording</label>
-        </div>
-        <div class="option-item">
-          <input type="checkbox" id="photography-option" />
-          <label for="photography-option">Photography</label>
-        </div>
-        <div class="option-item">
-          <input type="checkbox" id="photo-editing-option" />
-          <label for="photo-editing-option">Photo Editing</label>
-        </div>
-        <div class="option-item">
-          <input type="checkbox" id="podcast-recording-option" />
-          <label for="podcast-recording-option">Podcast Recording</label>
-        </div>
-        <div class="option-item">
-          <input type="checkbox" id="podcast-editing-option" />
-          <label for="podcast-editing-option">Podcast Editing</label>
-        </div>
-        <div class="option-item">
-          <input type="checkbox" id="poster-creation-option" />
-          <label for="poster-creation-option">Poster Creation</label>
-        </div>
-        <div class="option-item">
-          <input type="checkbox" id="recorded-presentation-option" />
-          <label for="recorded-presentation-option"
-            >Recorded Presentation</label
-          >
-        </div>
-        <div class="option-item">
-          <input type="checkbox" id="zoom-teleconference-option" />
-          <label for="zoom-teleconference-option">Zoom Teleconference</label>
-        </div>
-        <hr />
-        <div class="panel-options reset-filters-options margin-top">
-          <div class="option-item">
-            <a id="reset-filters-button" href="#" class="button red"
-              >Reset All Filters</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="site-container" class="site-container">
+    <div class="site-container">
       <header class="site-header">
         <section class="site-nav">
           <a class="site-logo" href="index.html">
@@ -187,31 +115,17 @@
       </header>
       <main id="main-content" class="site-main">
         <section class="title-section">
-          <h1>All Resources</h1>
+          <h1>All Projects</h1>
         </section>
-        <section class="main-buttons">
+        <!-- <section class="main-buttons">
           <div class="button-group">
-            <a id="filter-button" href="#" class="button blue margin-right"
-              >Filter</a
-            >
-            <a id="a-to-z-button" href="#" class="button outlined"
-              >Sort A - Z</a
-            >
+            <a href="#" class="button blue">Filter</a>
+            <a href="#" class="button outlined margin-left">Tips & Guides</a>
+            <a href="#" class="button outlined margin-left">Materials</a>
           </div>
-          <div class="button-group">
-            <input
-              id="resources-search"
-              class="margin-right"
-              placeholder="Search Resources"
-              type="text"
-            />
-            <a id="clear-search" href="#" class="button outlined">Clear</a>
-          </div>
-        </section>
-        <section class="cards-section">
-          <div id="cards-total" class="cards-total"></div>
-          <div id="cards-container" class="cards"></div>
-        </section>
+        </section> -->
+        <section id="cards-total" class="cards-total"></section>
+        <section id="project-cards" class="project-cards"></section>
       </main>
       <footer class="site-footer">
         <section class="site-footer-container">

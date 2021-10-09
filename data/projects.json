@@ -1,8 +1,24 @@
 {
   "projects": [
-    { "id": 1, "title": "Basic Video Recording" },
-    { "id": 2, "title": "Basic Audio Recording" },
-    { "id": 3, "title": "Basic Podcast" },
-    { "id": 4, "title": "Advanced Podcast" }
+    {
+      "id": 1,
+      "title": "Poster Presentation Creation",
+      "featured_image": "project-poster.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Basic Audio Recording",
+      "featured_image": "project-podcast.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Basic Vlog",
+      "featured_image": "project-vlog.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Advanced Film Production",
+      "featured_image": "project-film.jpg"
+    }
   ]
 }

@@ -91,6 +91,8 @@ resourcesData.addListener('add', (items, args) => {
     title,
     secondary_image
   );
+
+  updatePageTitle(title);
 });
 
 // resource image
@@ -191,6 +193,10 @@ const getItemsIncluded = (items_included) => {
   }
 
   return itemsIncluded;
+};
+
+const updatePageTitle = (title) => {
+  document.title = `${title} | Resource`;
 };
 
 getResourceData(resourceId);
