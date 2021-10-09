@@ -8,8 +8,29 @@ const projectsList = [];
 // initial data load of projects, calls a function when the array is changed
 const getProjectsData = async () => {
   const response = await fetch('./data/projects.json');
+
+  if (!response.ok) {
+    const message = `An error has occurred: ${response.status}`;
+    throw new Error(message);
+  }
+
   const data = await response.json();
-  projectsList.pushWithEvent(...data.projects);
+  return data;
+};
+
+const getAllProjectsData = () => {
+  getProjectsData()
+    .then((allData) => {
+      projectsList.pushWithEvent(...allData.projects);
+    })
+    .catch((error) => {
+      document.querySelector('#main-content').innerHTML = `
+      <section class='error-section'>
+        <h2 class='error-message'>${error.message}</h2>
+        <p>Sorry, an error occurred while processing your request.</p>
+        <a href="index.html">Return to Homepage</a>
+      </section>`;
+    });
 };
 
 // add custom listener for array events on the resourcesList array
@@ -78,4 +99,4 @@ const cardTemplate = (id, featured_image, title) => {
   `;
 };
 
-getProjectsData();
+getAllProjectsData();

@@ -8,8 +8,29 @@ const articlesList = [];
 // initial data load of projects, calls a function when the array is changed
 const getArticlesData = async () => {
   const response = await fetch('./data/articles.json');
+
+  if (!response.ok) {
+    const message = `An error has occurred: ${response.status}`;
+    throw new Error(message);
+  }
+
   const data = await response.json();
-  articlesList.pushWithEvent(...data.articles);
+  return data;
+};
+
+const getAllArticlesData = () => {
+  getArticlesData()
+    .then((allData) => {
+      articlesList.pushWithEvent(...allData.articles);
+    })
+    .catch((error) => {
+      document.querySelector('#main-content').innerHTML = `
+      <section class='error-section'>
+        <h2 class='error-message'>${error.message}</h2>
+        <p>Sorry, an error occurred while processing your request.</p>
+        <a href="index.html">Return to Homepage</a>
+      </section>`;
+    });
 };
 
 // add custom listener for array events on the resourcesList array
@@ -94,4 +115,4 @@ const cardTemplate = (id, featured_image, title, pub_date, category) => {
     </div>`;
 };
 
-getArticlesData();
+getAllArticlesData();

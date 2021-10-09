@@ -25,9 +25,30 @@ const resetFiltersButton = document.querySelector('#reset-filters-button');
 // initial data load of resources, calls a function when the array is changed
 const getResourceData = async () => {
   const response = await fetch('./data/resources.json');
+
+  if (!response.ok) {
+    const message = `An error has occurred: ${response.status}`;
+    throw new Error(message);
+  }
+
   const data = await response.json();
-  resourcesList.pushWithEvent(...data.resources);
-  filteredResourcesList.push(...data.resources);
+  return data;
+};
+
+const getAllResourceData = () => {
+  getResourceData()
+    .then((allData) => {
+      resourcesList.pushWithEvent(...allData.resources);
+      filteredResourcesList.push(...allData.resources);
+    })
+    .catch((error) => {
+      document.querySelector('#main-content').innerHTML = `
+      <section class='error-section'>
+        <h2 class='error-message'>${error.message}</h2>
+        <p>Sorry, an error occurred while processing your request.</p>
+        <a href="index.html">Return to Homepage</a>
+      </section>`;
+    });
 };
 
 // card template for resource cards
@@ -366,4 +387,4 @@ const checkAllOptions = () => {
   processResources(filteredResourcesList);
 };
 
-getResourceData();
+getAllResourceData();
