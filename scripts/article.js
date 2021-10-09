@@ -11,12 +11,38 @@ const articleTextElement = document.querySelector('#article-text');
 const articleId = params.get('id');
 const articlesData = [];
 
-const getArticleData = async (id) => {
+const getArticleData = async () => {
   const response = await fetch('./data/articles.json');
+
+  if (!response.ok) {
+    const message = `An error has occurred: ${response.status}`;
+    throw new Error(message);
+  }
+
   const data = await response.json();
-  articlesData.pushWithEvent(
-    data.articles.find((article) => article.id === parseInt(id))
-  );
+  return data;
+};
+
+const getArticleDataById = (id) => {
+  getArticleData()
+    .then((allData) => {
+      const data = allData.articles.find(
+        (article) => article.id === parseInt(id)
+      );
+      if (data) {
+        articlesData.pushWithEvent(data);
+      } else {
+        window.location.href = '404.html';
+      }
+    })
+    .catch((error) => {
+      document.querySelector('#main-content').innerHTML = `
+      <section class='error-section'>
+        <h2 class='error-message'>${error.message}</h2>
+        <p>Sorry, an error occurred while processing your request.</p>
+        <a href="index.html">Return to Homepage</a>
+      </section>`;
+    });
 };
 
 // add custom listener for array events on the articlesList array
@@ -112,4 +138,4 @@ const formatDate = (date) => {
   });
 };
 
-getArticleData(articleId);
+getArticleDataById(articleId);

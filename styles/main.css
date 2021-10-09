@@ -949,7 +949,8 @@ main.home-page {
   font-size: var(--h6-heading);
 }
 
-.page-not-found {
+.page-not-found,
+.error-section {
   width: 100%;
   height: 400px;
 
@@ -960,13 +961,16 @@ main.home-page {
   gap: 2rem;
 }
 
-.page-not-found h2 {
+.page-not-found h2,
+.error-section h2 {
   font-size: var(--xl2-text);
   color: var(--pantone-202);
 }
 
 .page-not-found p,
-.page-not-found a {
+.page-not-found a,
+.error-section p,
+.error-section a {
   font-size: var(--large-text);
 }
 

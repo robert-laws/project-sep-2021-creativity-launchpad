@@ -18,24 +18,36 @@ const resourcesData = [];
 
 const getResourceData = async () => {
   const response = await fetch('./data/resources.json');
+
+  if (!response.ok) {
+    const message = `An error has occurred: ${response.status}`;
+    throw new Error(message);
+  }
+
   const data = await response.json();
   return data;
 };
 
 const getResourceDataById = (id) => {
-  const data = getResourceData(id);
-  if (data.length > 0) {
-    const resource = data.resources.find(
-      (resource) => resource.id === parseInt(id)
-    );
-    if (resource) {
-      resourcesData.pushWithEvent(resource);
-    } else {
-      window.location.href = '404.html';
-    }
-  } else {
-    window.location.href = '404.html';
-  }
+  getResourceData()
+    .then((allData) => {
+      const data = allData.resources.find(
+        (resource) => resource.id === parseInt(id)
+      );
+      if (data) {
+        resourcesData.pushWithEvent(data);
+      } else {
+        window.location.href = '404.html';
+      }
+    })
+    .catch((error) => {
+      document.querySelector('#main-content').innerHTML = `
+      <section class='error-section'>
+        <h2 class='error-message'>${error.message}</h2>
+        <p>Sorry, an error occurred while processing your request.</p>
+        <a href="index.html">Return to Homepage</a>
+      </section>`;
+    });
 };
 
 // add custom listener for array events on the resourcesList array
