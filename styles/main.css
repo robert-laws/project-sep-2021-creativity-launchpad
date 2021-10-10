@@ -216,6 +216,7 @@ li {
 }
 
 input[type='text'] {
+  width: 100%;
   font-size: var(--large-text);
   padding: 1.25rem 1rem;
   border-radius: 0.5rem;
