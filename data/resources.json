@@ -18,8 +18,8 @@
       "id": 2,
       "title": "Logitech USB Microphone",
       "resource_image": "logitech-usb-microphone.jpg",
-      "featured_image": "logitech-usb-microphone.jpg",
-      "secondary_image": "",
+      "featured_image": "logitech-usb-microphone-featured.jpg",
+      "secondary_image": "logitech-usb-microphone-centered.jpg",
       "short_description": "Plug and play USB Microphone",
       "long_description": "The Logitech USB microphone provides superior clarity ideal for all voice access applications. Unwanted background noises are filtered by this noise-cancelling microphone to ensure interference-free conversations. It features a pivoting arm to adjust the position of the microphone and a mute button.",
       "projects": [

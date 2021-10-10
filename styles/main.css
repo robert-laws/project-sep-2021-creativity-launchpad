@@ -355,7 +355,7 @@ main.home-page {
 
 .home-image-1 {
   grid-column: 1 / -1;
-  grid-row: 6 / 12;
+  grid-row: 4 / 10;
   z-index: 100;
   margin-top: -2rem;
 }
@@ -375,7 +375,7 @@ main.home-page {
 
 .home-learn {
   grid-column: 1 / 2;
-  grid-row: 1 / 4;
+  grid-row: 1 / 2;
   color: var(--pantone-280);
   justify-self: center;
 }
@@ -387,7 +387,7 @@ main.home-page {
 
 .home-learn-subtitle {
   grid-column: 1 / 3;
-  grid-row: 4 / 5;
+  grid-row: 2 / 4;
   font-size: var(--large-text);
   font-weight: bold;
   color: var(--pantone-202);
