@@ -100,14 +100,14 @@
       "short_description": "DLSR Camera for video and photography",
       "long_description": "Mid-range DSLR video and photography camera. Features include a large 24.1 Megapixel CMOS sensor, fast autofocus, and built-in wireless connectivity. Captures high quality HD video up to a resolution of 1080p",
       "projects": ["video recording", "photography"],
-      "category": "audio",
+      "category": "video",
       "requires_training": false,
       "notes": "Battery can be charged while in the battery charger or inside the camera",
       "items_included": [
         "carrying case",
         "18-55mm lens",
         "64GB SDXC memory card",
-        "camera",
+        "camera body",
         "rechargeable lithium battery",
         "battery charger and power cable"
       ]

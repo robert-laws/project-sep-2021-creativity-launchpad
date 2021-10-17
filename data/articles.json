@@ -37,29 +37,104 @@
     {
       "id": 2,
       "title": "Making a Basic Podcast",
-      "sub_title": "",
+      "sub_title": "Get your voice out there. Discover the ways to create compelling audio recordings and content that gets people listening.",
       "featured_image": "project-podcast.jpg",
       "category": "video",
       "pub_date": "10-2-2021",
-      "article_content": []
+      "article_content": [
+        {
+          "section_heading": "Before you begin",
+          "paragraphs": [
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia aut voluptas, omnis saepe voluptatem harum corrupti quod sunt porro odit. Sed vel suscipit eveniet error atque porro ex quis recusandae illo veniam dignissimos impedit sequi, ipsa repellendus voluptatum iusto, praesentium sint neque adipisci, delectus deleniti iure? Iste minus at omnis!",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates similique, dolorem porro laboriosam voluptate dolor, fugiat aliquid, sequi tempore. Nihil consequuntur necessitatibus maxime tempora omnis, eligendi fugiat praesentium numquam dolores mollitia adipisci, cum obcaecati totam provident. Distinctio iste nihil quis dolor libero tempora, maiores rem iusto quia, velit numquam rerum reprehenderit assumenda laudantium consequuntur nam dicta earum! Odit at excepturi nesciunt, repudiandae laborum quia amet ad nisi ut tempore quibusdam laudantium atque, dolorum perspiciatis eum, cupiditate provident vitae?"
+          ]
+        },
+        {
+          "section_heading": "Getting the Right Hardware for the Job",
+          "paragraphs": [
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia aut voluptas, omnis saepe voluptatem harum corrupti quod sunt porro odit. Sed vel suscipit eveniet error atque porro ex quis recusandae illo veniam dignissimos impedit sequi, ipsa repellendus voluptatum iusto, praesentium sint neque adipisci, delectus deleniti iure? Iste minus at omnis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam error eius recusandae harum voluptatum qui dolor consequuntur natus exercitationem aperiam.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates similique, dolorem porro laboriosam voluptate dolor, fugiat aliquid, sequi tempore. Nihil consequuntur necessitatibus maxime tempora omnis, eligendi fugiat praesentium numquam dolores mollitia adipisci.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates similique, dolorem porro laboriosam voluptate dolor, fugiat aliquid, sequi tempore. Nihil consequuntur necessitatibus maxime tempora omnis, eligendi fugiat praesentium numquam dolores mollitia adipisci, cum obcaecati totam provident. Distinctio iste nihil quis dolor libero tempora, maiores rem iusto quia, velit numquam rerum reprehenderit assumenda laudantium consequuntur nam dicta earum! Odit at excepturi nesciunt, repudiandae laborum quia amet ad nisi ut tempore quibusdam laudantium atque, dolorum perspiciatis eum, cupiditate provident vitae?",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates similique, dolorem porro laboriosam voluptate dolor, fugiat aliquid, sequi tempore. Nihil consequuntur necessitatibus maxime tempora omnis, eligendi fugiat praesentium numquam dolores mollitia adipisci, cum obcaecati totam provident. Distinctio iste nihil quis dolor libero tempora, maiores rem iusto quia, velit numquam rerum reprehenderit assumenda laudantium consequuntur nam dicta earum! Odit at excepturi nesciunt, repudiandae laborum quia amet ad nisi ut tempore quibusdam laudantium atque, dolorum perspiciatis eum, cupiditate provident vitae?"
+          ]
+        },
+        {
+          "section_heading": "Software to the rescue",
+          "paragraphs": [
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est ducimus maxime voluptatibus!",
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore dolores molestiae fuga corporis atque incidunt necessitatibus ab adipisci cum tempora. Nostrum fuga nesciunt ducimus natus delectus aliquid rem hic. Totam neque aperiam blanditiis labore.",
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, at. Nemo sit voluptatem perferendis autem, quas, consequuntur recusandae sunt atque labore maxime consequatur molestias, perspiciatis error ab praesentium eveniet distinctio aperiam ipsum saepe fugiat fuga molestiae! Quibusdam reprehenderit deleniti nulla iusto eveniet quo fuga, dicta asperiores expedita, enim soluta similique! Quaerat aspernatur facere nihil animi nulla. Iste quis cumque iure laboriosam quod?"
+          ]
+        }
+      ]
     },
     {
       "id": 3,
       "title": "Creating a Personal Video Reflection",
-      "sub_title": "",
+      "sub_title": "More people notice when you create an interesting and eye-catching personal video.",
       "featured_image": "project-vlog.jpg",
       "category": "audio",
       "pub_date": "9-27-2021",
-      "article_content": []
+      "article_content": [
+        {
+          "section_heading": "Before you begin",
+          "paragraphs": [
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia aut voluptas, omnis saepe voluptatem harum corrupti quod sunt porro odit. Sed vel suscipit eveniet error atque porro ex quis recusandae illo veniam dignissimos impedit sequi, ipsa repellendus voluptatum iusto, praesentium sint neque adipisci, delectus deleniti iure? Iste minus at omnis!",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates similique, dolorem porro laboriosam voluptate dolor, fugiat aliquid, sequi tempore. Nihil consequuntur necessitatibus maxime tempora omnis, eligendi fugiat praesentium numquam dolores mollitia adipisci, cum obcaecati totam provident. Distinctio iste nihil quis dolor libero tempora, maiores rem iusto quia, velit numquam rerum reprehenderit assumenda laudantium consequuntur nam dicta earum! Odit at excepturi nesciunt, repudiandae laborum quia amet ad nisi ut tempore quibusdam laudantium atque, dolorum perspiciatis eum, cupiditate provident vitae?"
+          ]
+        },
+        {
+          "section_heading": "Getting the Right Hardware for the Job",
+          "paragraphs": [
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia aut voluptas, omnis saepe voluptatem harum corrupti quod sunt porro odit. Sed vel suscipit eveniet error atque porro ex quis recusandae illo veniam dignissimos impedit sequi, ipsa repellendus voluptatum iusto, praesentium sint neque adipisci, delectus deleniti iure? Iste minus at omnis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam error eius recusandae harum voluptatum qui dolor consequuntur natus exercitationem aperiam.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates similique, dolorem porro laboriosam voluptate dolor, fugiat aliquid, sequi tempore. Nihil consequuntur necessitatibus maxime tempora omnis, eligendi fugiat praesentium numquam dolores mollitia adipisci.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates similique, dolorem porro laboriosam voluptate dolor, fugiat aliquid, sequi tempore. Nihil consequuntur necessitatibus maxime tempora omnis, eligendi fugiat praesentium numquam dolores mollitia adipisci, cum obcaecati totam provident. Distinctio iste nihil quis dolor libero tempora, maiores rem iusto quia, velit numquam rerum reprehenderit assumenda laudantium consequuntur nam dicta earum! Odit at excepturi nesciunt, repudiandae laborum quia amet ad nisi ut tempore quibusdam laudantium atque, dolorum perspiciatis eum, cupiditate provident vitae?",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates similique, dolorem porro laboriosam voluptate dolor, fugiat aliquid, sequi tempore. Nihil consequuntur necessitatibus maxime tempora omnis, eligendi fugiat praesentium numquam dolores mollitia adipisci, cum obcaecati totam provident. Distinctio iste nihil quis dolor libero tempora, maiores rem iusto quia, velit numquam rerum reprehenderit assumenda laudantium consequuntur nam dicta earum! Odit at excepturi nesciunt, repudiandae laborum quia amet ad nisi ut tempore quibusdam laudantium atque, dolorum perspiciatis eum, cupiditate provident vitae?"
+          ]
+        },
+        {
+          "section_heading": "Software to the rescue",
+          "paragraphs": [
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est ducimus maxime voluptatibus!",
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore dolores molestiae fuga corporis atque incidunt necessitatibus ab adipisci cum tempora. Nostrum fuga nesciunt ducimus natus delectus aliquid rem hic. Totam neque aperiam blanditiis labore.",
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, at. Nemo sit voluptatem perferendis autem, quas, consequuntur recusandae sunt atque labore maxime consequatur molestias, perspiciatis error ab praesentium eveniet distinctio aperiam ipsum saepe fugiat fuga molestiae! Quibusdam reprehenderit deleniti nulla iusto eveniet quo fuga, dicta asperiores expedita, enim soluta similique! Quaerat aspernatur facere nihil animi nulla. Iste quis cumque iure laboriosam quod?"
+          ]
+        }
+      ]
     },
     {
       "id": 4,
       "title": "Creating a Poster Presentation",
-      "sub_title": "",
+      "sub_title": "Make a splash with a stunning poster that combines interesting photography and graphic design.",
       "featured_image": "project-poster.jpg",
       "category": "graphic design",
       "pub_date": "8-19-2021",
-      "article_content": []
+      "article_content": [
+        {
+          "section_heading": "Before you begin",
+          "paragraphs": [
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia aut voluptas, omnis saepe voluptatem harum corrupti quod sunt porro odit. Sed vel suscipit eveniet error atque porro ex quis recusandae illo veniam dignissimos impedit sequi, ipsa repellendus voluptatum iusto, praesentium sint neque adipisci, delectus deleniti iure? Iste minus at omnis!",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates similique, dolorem porro laboriosam voluptate dolor, fugiat aliquid, sequi tempore. Nihil consequuntur necessitatibus maxime tempora omnis, eligendi fugiat praesentium numquam dolores mollitia adipisci, cum obcaecati totam provident. Distinctio iste nihil quis dolor libero tempora, maiores rem iusto quia, velit numquam rerum reprehenderit assumenda laudantium consequuntur nam dicta earum! Odit at excepturi nesciunt, repudiandae laborum quia amet ad nisi ut tempore quibusdam laudantium atque, dolorum perspiciatis eum, cupiditate provident vitae?"
+          ]
+        },
+        {
+          "section_heading": "Getting the Right Hardware for the Job",
+          "paragraphs": [
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia aut voluptas, omnis saepe voluptatem harum corrupti quod sunt porro odit. Sed vel suscipit eveniet error atque porro ex quis recusandae illo veniam dignissimos impedit sequi, ipsa repellendus voluptatum iusto, praesentium sint neque adipisci, delectus deleniti iure? Iste minus at omnis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam error eius recusandae harum voluptatum qui dolor consequuntur natus exercitationem aperiam.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates similique, dolorem porro laboriosam voluptate dolor, fugiat aliquid, sequi tempore. Nihil consequuntur necessitatibus maxime tempora omnis, eligendi fugiat praesentium numquam dolores mollitia adipisci.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates similique, dolorem porro laboriosam voluptate dolor, fugiat aliquid, sequi tempore. Nihil consequuntur necessitatibus maxime tempora omnis, eligendi fugiat praesentium numquam dolores mollitia adipisci, cum obcaecati totam provident. Distinctio iste nihil quis dolor libero tempora, maiores rem iusto quia, velit numquam rerum reprehenderit assumenda laudantium consequuntur nam dicta earum! Odit at excepturi nesciunt, repudiandae laborum quia amet ad nisi ut tempore quibusdam laudantium atque, dolorum perspiciatis eum, cupiditate provident vitae?",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates similique, dolorem porro laboriosam voluptate dolor, fugiat aliquid, sequi tempore. Nihil consequuntur necessitatibus maxime tempora omnis, eligendi fugiat praesentium numquam dolores mollitia adipisci, cum obcaecati totam provident. Distinctio iste nihil quis dolor libero tempora, maiores rem iusto quia, velit numquam rerum reprehenderit assumenda laudantium consequuntur nam dicta earum! Odit at excepturi nesciunt, repudiandae laborum quia amet ad nisi ut tempore quibusdam laudantium atque, dolorum perspiciatis eum, cupiditate provident vitae?"
+          ]
+        },
+        {
+          "section_heading": "Software to the rescue",
+          "paragraphs": [
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est ducimus maxime voluptatibus!",
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore dolores molestiae fuga corporis atque incidunt necessitatibus ab adipisci cum tempora. Nostrum fuga nesciunt ducimus natus delectus aliquid rem hic. Totam neque aperiam blanditiis labore.",
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, at. Nemo sit voluptatem perferendis autem, quas, consequuntur recusandae sunt atque labore maxime consequatur molestias, perspiciatis error ab praesentium eveniet distinctio aperiam ipsum saepe fugiat fuga molestiae! Quibusdam reprehenderit deleniti nulla iusto eveniet quo fuga, dicta asperiores expedita, enim soluta similique! Quaerat aspernatur facere nihil animi nulla. Iste quis cumque iure laboriosam quod?"
+          ]
+        }
+      ]
     }
   ]
 }
