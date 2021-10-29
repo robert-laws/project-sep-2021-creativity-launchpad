@@ -96,7 +96,7 @@ articlesData.addListener('add', (items, args) => {
 
 const articleLead = (title, sub_title, pub_date, category, featured_image) => {
   return `
-    <span>${category}</span>
+    <span><strong>Category:</strong> ${category}</span>
     <h1>${title}</h1>
     <h4>${sub_title}</h4>
     <div class="author">

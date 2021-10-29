@@ -99,7 +99,7 @@ const cardTemplate = (id, featured_image, title, pub_date, category) => {
   return `
     <div class='article'>
       <div class='article-content'>
-        <span>${category}</span>
+        <span><strong>Category:</strong> ${category}</span>
         <a href='article.html?id=${id}'><h3>${title}</h3></a>
         <h6>Published on ${formatDate(pub_date)}</h6>
         <a href='article.html?id=${id}' class='button yellow'>
