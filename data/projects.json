@@ -136,7 +136,7 @@
       "id": 5,
       "title": "Recorded Presentation",
       "project_type": "recorded presentation",
-      "featured_image": "project-poster.jpg",
+      "featured_image": "recorded-presentation.jpg",
       "description": "This project is about ...",
       "project_content": [
         {
@@ -152,7 +152,7 @@
       "id": 6,
       "title": "Zoom Teleconference",
       "project_type": "zoom teleconference",
-      "featured_image": "project-poster.jpg",
+      "featured_image": "zoom-teleconference.jpg",
       "description": "This project is about ...",
       "project_content": [
         {
@@ -168,7 +168,7 @@
       "id": 7,
       "title": "Podcast Editing",
       "project_type": "podcast editing",
-      "featured_image": "project-poster.jpg",
+      "featured_image": "podcast-editing.jpg",
       "description": "This project is about ...",
       "project_content": [
         {
@@ -184,7 +184,7 @@
       "id": 8,
       "title": "Video Editing",
       "project_type": "video editing",
-      "featured_image": "project-poster.jpg",
+      "featured_image": "video-editing.jpg",
       "description": "This project is about ...",
       "project_content": [
         {
@@ -200,7 +200,7 @@
       "id": 9,
       "title": "Photography",
       "project_type": "photography",
-      "featured_image": "project-poster.jpg",
+      "featured_image": "photography.jpg",
       "description": "This project is about ...",
       "project_content": [
         {
@@ -216,7 +216,7 @@
       "id": 10,
       "title": "Photo Editing",
       "project_type": "photo editing",
-      "featured_image": "project-poster.jpg",
+      "featured_image": "photo-editing.jpg",
       "description": "This project is about ...",
       "project_content": [
         {
