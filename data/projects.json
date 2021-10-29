@@ -38,30 +38,35 @@
       "title": "Basic Audio Recording",
       "project_type": "audio recording",
       "featured_image": "project-podcast.jpg",
-      "description": "This project is about graphic design and creating a high-quality presentation for class assignments or conference presentations. The process of creating an attractive poster presentation is about understanding graphic design and building skill in software specifically designed for creating this type of content.",
+      "description": "This project is about capturing audio for multiple purposes. Audio recordings can be used to communicate an idea quickly instead of writing, to introduce audio content on top of a presentation or video content, and much more.",
       "project_content": [
         {
-          "section_heading": "Before you begin",
+          "section_heading": "Learn about the Hardware",
           "paragraphs": [
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia aut voluptas, omnis saepe voluptatem harum corrupti quod sunt porro odit. Sed vel suscipit eveniet error atque porro ex quis recusandae illo veniam dignissimos impedit sequi, ipsa repellendus voluptatum iusto, praesentium sint neque adipisci, delectus deleniti iure? Iste minus at omnis!",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates similique, dolorem porro laboriosam voluptate dolor, fugiat aliquid, sequi tempore. Nihil consequuntur necessitatibus maxime tempora omnis, eligendi fugiat praesentium numquam dolores mollitia adipisci, cum obcaecati totam provident. Distinctio iste nihil quis dolor libero tempora, maiores rem iusto quia, velit numquam rerum reprehenderit assumenda laudantium consequuntur nam dicta earum! Odit at excepturi nesciunt, repudiandae laborum quia amet ad nisi ut tempore quibusdam laudantium atque, dolorum perspiciatis eum, cupiditate provident vitae?"
+            "Getting started with audio recording all comes down to understanding how to use the hardware. In this case, microphones are the main hardware that students will use to do their audio recordings. There are several different types of microphones. Most common are USB microphones, dynamic microphones, and large diaphragm condenser microphones",
+            "The library offers all three and each can be used for different reasons. "
           ]
         },
         {
-          "section_heading": "Getting the Right Hardware for the Job",
+          "section_heading": "USB Microphones",
           "paragraphs": [
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia aut voluptas, omnis saepe voluptatem harum corrupti quod sunt porro odit. Sed vel suscipit eveniet error atque porro ex quis recusandae illo veniam dignissimos impedit sequi, ipsa repellendus voluptatum iusto, praesentium sint neque adipisci, delectus deleniti iure? Iste minus at omnis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam error eius recusandae harum voluptatum qui dolor consequuntur natus exercitationem aperiam.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates similique, dolorem porro laboriosam voluptate dolor, fugiat aliquid, sequi tempore. Nihil consequuntur necessitatibus maxime tempora omnis, eligendi fugiat praesentium numquam dolores mollitia adipisci.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates similique, dolorem porro laboriosam voluptate dolor, fugiat aliquid, sequi tempore. Nihil consequuntur necessitatibus maxime tempora omnis, eligendi fugiat praesentium numquam dolores mollitia adipisci, cum obcaecati totam provident. Distinctio iste nihil quis dolor libero tempora, maiores rem iusto quia, velit numquam rerum reprehenderit assumenda laudantium consequuntur nam dicta earum! Odit at excepturi nesciunt, repudiandae laborum quia amet ad nisi ut tempore quibusdam laudantium atque, dolorum perspiciatis eum, cupiditate provident vitae?",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates similique, dolorem porro laboriosam voluptate dolor, fugiat aliquid, sequi tempore. Nihil consequuntur necessitatibus maxime tempora omnis, eligendi fugiat praesentium numquam dolores mollitia adipisci, cum obcaecati totam provident. Distinctio iste nihil quis dolor libero tempora, maiores rem iusto quia, velit numquam rerum reprehenderit assumenda laudantium consequuntur nam dicta earum! Odit at excepturi nesciunt, repudiandae laborum quia amet ad nisi ut tempore quibusdam laudantium atque, dolorum perspiciatis eum, cupiditate provident vitae?"
+            "USB Microphones are easy to use and can connect directly to a computer via a USB connection. They are quick to setup and can help students start recording audio quickly. The audio captured by the USB microphone is processed and digitized through the microphone itself and does not require any additional equipment or processing to be useable.",
+            "Of course, the quality of the audio can vary and may not be satisfactory for professional or production level use. However, the audio from a USB microphone is good enough for use on teleconferences, audio notes, or rough cuts of a podcast or video voice over."
           ]
         },
         {
-          "section_heading": "Software to the rescue",
+          "section_heading": "Dynamic Microphones",
           "paragraphs": [
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est ducimus maxime voluptatibus!",
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore dolores molestiae fuga corporis atque incidunt necessitatibus ab adipisci cum tempora. Nostrum fuga nesciunt ducimus natus delectus aliquid rem hic. Totam neque aperiam blanditiis labore.",
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, at. Nemo sit voluptatem perferendis autem, quas, consequuntur recusandae sunt atque labore maxime consequatur molestias, perspiciatis error ab praesentium eveniet distinctio aperiam ipsum saepe fugiat fuga molestiae! Quibusdam reprehenderit deleniti nulla iusto eveniet quo fuga, dicta asperiores expedita, enim soluta similique! Quaerat aspernatur facere nihil animi nulla. Iste quis cumque iure laboriosam quod?"
+            "For higher quality audio recordings, dynamic microphones are a step up from USB microphones. These microphones contain a dynamic cartridge, which helps to produce smooth, flat, and wide-range audio for a clean and natural reproduction of music and speech audio.",
+            "These microphones are typically connected via an XLR cable, which produces higher sound quality than USB, although it requires some additional connections and setup to begin capturing audio.",
+            "The library can help with the setup of this type of microphone and direct students to resources to help instruct them on best practices."
+          ]
+        },
+        {
+          "section_heading": "Large Diaphragm Condenser Microphones",
+          "paragraphs": [
+            "For the most sensitive audio recordings, large diaphragm condenser microphones are the best choice. These microphones work by using a capacitor (or condenser) to convert acoustic vibrations into an electrical current. This does mean that they need a power source like 48V phantom power to operate.",
+            "This type of microphone is most commonly associated with studio recordings and very high quality output. The microphone is most appropriate for situations where the audio will be used for production-level content and publishing."
           ]
         }
       ]
